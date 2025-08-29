@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whispers Wine Cellar - An Animated Experience</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ======================= Header ======================= -->
+    <header id="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Whispers Wine Cellar</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#our-wines">Our Wines</a></li>
+                <li><a href="#the-story">The Story</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- ======================= Hero Section with Video Background ======================= -->
+<section id="hero">
+
+    <div class="hero-video-wrapper">
+        <iframe
+            id="hero-video"
+            src="https://www.youtube.com/embed/advBG64C_3Q?autoplay=1&mute=1&loop=1&playlist=advBG64C_3Q&controls=0&showinfo=0&autohide=1&modestbranding=1&enablejsapi=1"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+<div class="hero-content">
+    <h1>Whispers: Every Bottle Tells a Story.</h1>
+    <a href="#our-wines" class="btn">Discover Our Collection</a>
+
+    <!-- === ADD THIS NEW BUTTON CODE === -->
+    <div id="unmute-button" class="muted">
+        <!-- Muted Speaker Icon -->
+        <svg class="icon-muted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM19 12c0 .82-.15 1.61-.41 2.34l1.53 1.53c.56-1.17.88-2.48.88-3.87s-.32-2.7-.88-3.87l-1.53 1.53c.26.73.41 1.52.41 2.34z"/></svg>
+        <!-- Unmuted Speaker Icon -->
+        <svg class="icon-unmuted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+    </div>
+
+</div>
+
+
+
+
+
+
+    
+</section>
+
+    <!-- ======================= "Our Wines" Section with Video Placeholders ======================= -->
+    <main>
+        <section id="our-wines" class="wine-section">
+            <h2>Our Wines</h2>
+            <div class="wine-grid">
+                
+                <!-- Wine 1: Solaris Ice Wine -->
+                <div class="wine-card">
+                    <div class="wine-video-container">
+                        <!-- === TODO: Place your YouTube iframe embed for Solaris Ice Wine here === -->
+                        <!-- Example: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?..." ...></iframe> -->
+                        <div class="video-placeholder">Animation for Solaris Ice Wine</div>
+                    </div>
+                    <h3>Solaris Ice Wine</h3>
+                </div>
+                
+                <!-- Wine 2: Midnight Merlot -->
+                <div class="wine-card">
+                    <div class="wine-video-container">
+                        <!-- === TODO: Place your YouTube iframe embed for Midnight Merlot here === -->
+                        <div class="video-placeholder">Animation for Midnight Merlot</div>
+                    </div>
+                    <h3>Midnight Merlot</h3>
+                </div>
+
+                <!-- Wine 3: Golden Riesling -->
+                <div class="wine-card">
+                    <div class="wine-video-container">
+                        <!-- === TODO: Place your YouTube iframe embed for Golden Riesling here === -->
+                        <div class="video-placeholder">Animation for Golden Riesling</div>
+                    </div>
+                    <h3>Golden Riesling</h3>
+                </div>
+
+                <!-- Wine 4: Crimson Cabernet -->
+                <div class="wine-card">
+                    <div class="wine-video-container">
+                        <!-- === TODO: Place your YouTube iframe embed for Crimson Cabernet here === -->
+                        <div class="video-placeholder">Animation for Crimson Cabernet</div>
+                    </div>
+                    <h3>Crimson Cabernet</h3>
+                </div>
+
+                <!-- Wine 5: Aurora Rosé -->
+                <div class="wine-card">
+                   <div class="wine-video-container">
+                        <!-- === TODO: Place your YouTube iframe embed for Aurora Rosé here === -->
+                        <div class="video-placeholder">Animation for Aurora Rosé</div>
+                    </div>
+                    <h3>Aurora Rosé</h3>
+                </div>
+
+                <!-- Wine 6: Starfall Chardonnay -->
+                <div class="wine-card">
+                    <div class="wine-video-container">
+                        <!-- === TODO: Place your YouTube iframe embed for Starfall Chardonnay here === -->
+                        <div class="video-placeholder">Animation for Starfall Chardonnay</div>
+                    </div>
+                    <h3>Starfall Chardonnay</h3>
+                </div>
+
+            </div>
+        </section>
+
+ 
+ <!-- ... (after your "Our Wines" section) ... -->
+
+<!-- ======================= Gateways Section ======================= -->
+<section id="gateways" class="gateways-section">
+    <h2>Gateways to Our Stories</h2>
+    <div class="gateway-player-container" style="display: none;">
+        <h3 id="gateway-title"></h3>
+        <div id="gateway-player"></div> <!-- YouTube player will be injected here -->
+        <div id="gateway-controls">
+            <button id="prev-video">Previous</button>
+            <button id="next-video">Next</button>
+        </div>
+    </div>
+    <div id="gateway-selection-container">
+    <p>Select a show to begin the experience.</p>
+    <div id="gateway-buttons">
+        <!-- Buttons will be dynamically inserted here by JavaScript -->
+    </div>
+</div>
+</section>
+
+<!-- ... (the rest of your HTML) ... -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- ======================= "The Story" Section ======================= -->
+        <section id="the-story" class="story-section">
+             <div class="story-content">
+                <div class="story-text">
+                    <h2>Our Philosophy</h2>
+                    <p>At Whispers, we believe that wine is more than just a beverage; it's a narrative captured in a bottle. Our vineyards are tended with a respect for nature's quiet rhythms, allowing each grape to develop its own voice. Each sip is a chapter, a memory, a whisper of the earth itself.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================= Footer ======================= -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h4>Whispers Wine Cellar</h4>
+                <p>Crafting stories, one bottle at a time. Experience the whisper of the vineyard in every glass.</p>
+            </div>
+            <div class="footer-signup">
+                <h4>Join Our List</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Whispers Wine Cellar. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
+

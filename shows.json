@@ -1,0 +1,42 @@
+{
+  "gateways": {
+    "lostLove": {
+      "title": "The Lost Love Series",
+      "description": "A journey through heartbreak...",
+      "genre": "Romance",
+      "playlist": [
+        {
+          "videoId": "ktjZn9pPp_8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Can\u2019t Let This Love Go (refresh)"
+        },
+        {
+          "videoId": "nL8W7SXRzO0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Until the Morning refresh version"
+        }
+      ]
+    },
+    "games": {
+      "title": "Gaming Adventures",
+      "description": "Epic battles and virtual worlds.",
+      "genre": "Gaming",
+      "playlist": [
+        {
+          "videoId": "ktjZn9pPp_8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Can\u2019t Let This Love Go (refresh)"
+        },
+        {
+          "videoId": "nL8W7SXRzO0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Until the Morning refresh version"
+        }
+      ]
+    }
+  }
+}
