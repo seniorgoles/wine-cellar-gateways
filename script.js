@@ -49,6 +49,12 @@ unmuteButton.addEventListener('click', function() {
 // ===                UPGRADED GATEWAY PLAYER LOGIC                 ===
 // ====================================================================
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+}
 let gatewayData = {}; // This will store our shows.json data
 let gatewayPlayer;    // This will be our new YouTube player instance
 let currentGatewayKey = '';
@@ -106,7 +112,7 @@ function loadGateway(gatewayKey) {
     console.error("Gateway not found:", gatewayKey);
     return;
   }
-
+  shuffleArray(gatewayData[gatewayKey].playlist); 
   currentGatewayKey = gatewayKey;
   currentVideoIndex = 0;
 
