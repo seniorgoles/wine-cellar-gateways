@@ -54,15 +54,7 @@ let gatewayData = {}; // This will store our shows.json data
 let gatewayPlayer;    // This will be our new YouTube player instance
 let currentGatewayKey = '';
 let currentVideoIndex = 0;
-let gatewayData = {}; // This will store our shows.json data
 
-// --- NEW HELPER FUNCTION: Shuffles an array in place ---
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
-  }
-}
 
 // --- 1. Fetch the show data and initialize the gateways ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -117,7 +109,6 @@ function loadGateway(gatewayKey) {
     return;
   }
 
-  shuffleArray(gatewayData[gatewayKey].playlist); 
   currentGatewayKey = gatewayKey;
   currentVideoIndex = 0;
 
