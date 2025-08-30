@@ -45,7 +45,6 @@ unmuteButton.addEventListener('click', function() {
   }
 });
 
-
 // ====================================================================
 // ===                UPGRADED GATEWAY PLAYER LOGIC                 ===
 // ====================================================================
@@ -54,7 +53,15 @@ let gatewayData = {}; // This will store our shows.json data
 let gatewayPlayer;    // This will be our new YouTube player instance
 let currentGatewayKey = '';
 let currentVideoIndex = 0;
+let gatewayData = {}; // This will store our shows.json data
 
+// --- NEW HELPER FUNCTION: Shuffles an array in place ---
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+  }
+}
 
 // --- 1. Fetch the show data and initialize the gateways ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -92,7 +99,7 @@ function buildGatewayButtons() {
         button.className = 'btn';
         button.textContent = show.title; // Use the title from the JSON
         
-        // Add description as a hover tooltip
+        // Add description as a hover tooltcommitedip
         button.title = show.description; 
         
         // IMPORTANT: We use an event listener instead of 'onclick' in the HTML
@@ -108,8 +115,10 @@ function loadGateway(gatewayKey) {
     console.error("Gateway not found:", gatewayKey);
     return;
   }
-
-  currentGatewayKey = gatewayKey;
+  // === THIS IS THE MAGIC LINE TO ADD ===
+  shuffleArray(gatewayData[gatewayKey].playlist); 
+ 
+ currentGatewayKey = gatewayKey;
   currentVideoIndex = 0;
 
   // Show the player and hide the selection buttons
