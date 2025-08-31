@@ -144,7 +144,72 @@ a { text-decoration: none; color: var(--color-burgundy); transition: color 0.3s 
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #fff;{
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
+          },
+          {
+            "videoId": "DePO9B62PAo",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+          }
+        ]
+      }
+    },
+    "wines": {
+      "solarice": {
+        "sheetName": "solarice",
+        "title": "Solaris Ice Wine",
+        "description": "A rare treasure...",
+        "genre": "Ice Wine",
+        "type": "wine",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "playlist": [
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "The Story of Solaris Ice Wine"
+          },
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Perfect Pairings for Solaris"
+          }
+        ]
+      },
+      "midnight": {
+        "sheetName": "midnight",
+        "title": "Midnight Merlot",
+        "description": "Deep and comforting...",
+        "genre": "Merlot",
+        "type": "wine",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "playlist": [
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "The Story of Midnight Ice Wine"
+          },
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Perfect Pairings for Midnight"
+          }
+        ]
+      }
+    }
+  }
+}
     font-family: var(--font-body);
 }
 
@@ -236,10 +301,12 @@ footer { background-color: var(--color-charcoal); color: var(--color-cream); pad
 .gateway-player-wrapper {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align to the top for consistency */
+    align-items: flex-start;
     gap: 20px;
     max-width: 1600px;
     margin: 0 auto;
+    width: 100%;      /* <-- ADD THIS */
+    flex-grow: 1;     /* <-- ADD THIS */
 }
 
 /* Styling for the side video containers */
@@ -277,7 +344,7 @@ footer { background-color: var(--color-charcoal); color: var(--color-cream); pad
 #gateway-player {
     width: 100%;
     aspect-ratio: 16 / 9;
-    background-color: #000;
+    background-color: #000; /* Shows a black box while video loads */
 }
 
 #gateway-player iframe {
@@ -317,3 +384,77 @@ footer { background-color: var(--color-charcoal); color: var(--color-cream); pad
     height: 100%;
     border: none; /* Good practice to remove the default border */
 }
+
+/* --- New Styles for Dynamic Sections --- */
+
+/* This applies to both the Wines and Gateways sections */
+.dynamic-section {
+    position: relative; /* Crucial for positioning the background video */
+    padding: 80px 5%;
+    color: var(--color-white); /* Change default text to white for readability on video */
+    overflow: hidden;
+}
+
+/* Generic wrapper for background videos */
+.dynamic-section .background-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.dynamic-section .background-video-wrapper iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    pointer-events: none;
+    opacity: 0.3; /* Make the background video subtle */
+}
+
+/* This container holds the actual content, placed on top of the video */
+.dynamic-section .section-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.dynamic-section h2 {
+    color: var(--color-white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.dynamic-buttons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* New styling for the links section */
+#site-links-container {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#site-links-container a {
+    display: block;
+    margin: 10px auto;
+    color: var(--color-cream);
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#site-links-container a:hover {
+    color: var(--color-gold);
+}
+  
