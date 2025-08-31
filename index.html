@@ -127,23 +127,41 @@
 <!-- ======================= Gateways Section ======================= -->
 <section id="gateways" class="gateways-section">
     <h2>Gateways to Our Stories</h2>
-    <div class="gateway-player-container" style="display: none;">
-        <h3 id="gateway-title"></h3>
-        <div id="gateway-player"></div> <!-- YouTube player will be injected here -->
-        <div id="gateway-controls">
-            <button id="prev-video">Previous</button>
-            <button id="next-video">Next</button>
+
+    <div id="gateway-selection-container">
+        <p>Select a show to begin the experience.</p>
+        <div id="gateway-buttons">
+            <!-- Buttons will be dynamically inserted here by JavaScript -->
         </div>
     </div>
-    <div id="gateway-selection-container">
-    <p>Select a show to begin the experience.</p>
-    <div id="gateway-buttons">
-        <!-- Buttons will be dynamically inserted here by JavaScript -->
-    </div>
-</div>
-</section>
 
-<!-- ... (the rest of your HTML) ... -->
+    <div class="gateway-player-wrapper" style="display: none;">
+        <div class="sidebar-video">
+            <!-- TODO: Add your looping YouTube embed for the left side video -->
+       <iframe src="https://www.youtube.com/embed/ETg9ULatCa0?autoplay=1&mute=1&loop=1&playlist=ETg9ULatCa0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        
+        
+        
+        </div>
+
+       <div class="main-player-area">
+       <div id="gateway-player"></div>
+       <div id="gateway-controls">
+           <button id="prev-video">Previous</button>
+           <button id="next-video">Next</button>
+           <!-- The title now lives inside the controls container -->
+           <h3 id="gateway-title">Select a show to begin</h3> 
+       </div>
+   </div>
+
+        <div class="sidebar-video">
+            <!-- TODO: Add your looping YouTube embed for the right side video -->
+                   <iframe src="https://www.youtube.com/embed/Ath8nj_qE_w?autoplay=1&mute=1&loop=1&playlist=Ath8nj_qE_w&controls=0&showinfo=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        </div>
+    </div>
+</section>
  
  
  
