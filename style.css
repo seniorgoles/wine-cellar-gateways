@@ -216,3 +216,104 @@ footer { background-color: var(--color-charcoal); color: var(--color-cream); pad
 #unmute-button:not(.muted) .icon-muted {
     display: none;
 }
+
+/* ======================= Gateways Section Styling (Verified) ======================= */
+.gateways-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#gateway-selection-container {
+    margin-bottom: 40px;
+}
+
+#gateway-buttons .btn {
+    margin: 5px;
+}
+
+/* This is the main container for the player and sidebars */
+.gateway-player-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top for consistency */
+    gap: 20px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Styling for the side video containers */
+.sidebar-video {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: #000;
+    aspect-ratio: 9 / 16;
+}
+
+.video-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+/* Styling for the main player area */
+.main-player-area {
+    width: 100%;
+    max-width: 800px;
+}
+
+#gateway-title {
+    margin-top: 15px;  /* Add some space above the title */
+    font-size: 1em;    /* Make the font a little smaller */
+    font-weight: normal; /* Make it less bold */
+    color: #555;      /* A slightly softer color */
+    height: 40px;      /* Give it a fixed height to prevent layout shifts */
+    overflow: hidden;  /* Hide any text that overflows the height */
+}
+
+#gateway-player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+#gateway-player iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#gateway-controls {
+    margin-top: 15px;
+}
+
+#gateway-controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Styling for the selected Gateway button */
+#gateway-buttons .btn.active {
+    background-color: var(--color-burgundy);
+    color: var(--color-white);
+    border: 1px solid var(--color-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* --- Responsive Behavior --- */
+@media (max-width: 1100px) {
+    .sidebar-video {
+        display: none; /* Hide sidebars on smaller screens */
+    }
+}
+
+/* Add this to make the sidebar videos fill their containers */
+.sidebar-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Good practice to remove the default border */
+}
