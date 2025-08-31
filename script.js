@@ -1,207 +1,213 @@
-// This code loads the YouTube Iframe Player API asynchronously.
+// ====================================================================
+// ===          YOUTUBE IFRAME API LOADER (CRITICAL CODE)           ===
+// ====================================================================
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+// ====================================================================
 
-// This variable will hold our video player object.
-var player;
-
-// This function is called by the YouTube API when it's ready.
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('hero-video', {
-    events: {
-      'onReady': onPlayerReady
-    }
-  });
-}
-
-// The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  // The video is already playing muted because of the URL parameters.
-  // We don't need to do anything here, but the function must exist.
-}
-
-// === Our Custom Code for the Button ===
-
-// Get the button element from the HTML
-const unmuteButton = document.getElementById('unmute-button');
-
-// Add a click event listener to the button
-unmuteButton.addEventListener('click', function() {
-  // Check if the player exists and has the mute/unmute functions
-  if (player && typeof player.isMuted === 'function') {
-    
-    if (player.isMuted()) {
-      // If the video is muted, unmute it.
-      player.unMute();
-      unmuteButton.classList.remove('muted');
-    } else {
-      // If the video is not muted, mute it.
-      player.mute();
-      unmuteButton.classList.add('muted');
-    }
-
-  }
-});
 
 // ====================================================================
-// ===                UPGRADED GATEWAY PLAYER LOGIC                 ===
+// ===       Whispers Wine Cellar - Main Script v2.2 (Corrected)    ===
 // ====================================================================
+
+// --- Global Variables ---
+let siteData = {};
+let gatewayPlayer;
+let currentContentKey = '';
+let currentContentType = '';
+let currentVideoIndex = 0;
+
+// --- Helper Functions ---
+function createBgVideo(videoId) {
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1`;
+    iframe.frameBorder = '0';
+    iframe.allow = 'autoplay; encrypted-media';
+    return iframe;
+}
+
+function createSidebarVideo(videoId, container) {
+    if (!videoId) {
+        container.innerHTML = '<div class="video-placeholder"></div>';
+        return;
+    }
+    container.innerHTML = '';
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1`;
+    container.appendChild(iframe);
+}
+
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    [array[i], array[j]] = [array[j], array[i]];
   }
 }
 
-let gatewayData = {}; // This will store our shows.json data
-let gatewayPlayer;    // This will be our new YouTube player instance
-let currentGatewayKey = '';
-let currentVideoIndex = 0;
-
-// --- 1. Fetch the show data and initialize the gateways ---
+// --- Main Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
     fetch('shows.json')
       .then(response => {
-          if (!response.ok) {
-              throw new Error('Network response was not ok: ' + response.statusText);
-          }
+          if (!response.ok) throw new Error('Network response was not ok');
           return response.json();
       })
       .then(data => {
-        gatewayData = data.gateways;
-        console.log("Gateway data loaded successfully!");
-        buildGatewayButtons();
+        siteData = data;
+        console.log("Site data loaded successfully!", siteData);
+        initializePage();
       })
       .catch(error => {
           console.error("Fatal Error: Could not load or parse shows.json.", error);
-          const buttonContainer = document.getElementById('gateway-buttons');
-          if(buttonContainer) buttonContainer.innerHTML = '<p style="color:red;">Error: Could not load show data.</p>';
       });
 });
 
-// --- 2. Dynamically build the selection buttons ---
-function buildGatewayButtons() {
-    document.querySelector('.gateway-player-wrapper').style.display = 'none'; // <-- ADD THIS LINE
-    const buttonContainer = document.getElementById('gateway-buttons');
-    if (!buttonContainer) return;
+function initializePage() {
+    if (siteData.siteConfig?.heroBgVideoId) {
+        document.getElementById('hero-video-wrapper').appendChild(createBgVideo(siteData.siteConfig.heroBgVideoId));
+    }
+    if (siteData.siteConfig?.winesBgVideoId) {
+        document.querySelector('#our-wines .background-video-wrapper').appendChild(createBgVideo(siteData.siteConfig.winesBgVideoId));
+    }
+    if (siteData.siteConfig?.gatewaysBgVideoId) {
+        document.querySelector('#gateways .background-video-wrapper').appendChild(createBgVideo(siteData.siteConfig.gatewaysBgVideoId));
+    }
+    buildDynamicButtons('wines', '#wine-buttons-container');
+    buildDynamicButtons('gateways', '#gateway-buttons');
+    buildSiteLinks();
+   
+}
 
-    // Clear any existing buttons
-    buttonContainer.innerHTML = '';
-
-    // Loop through the loaded gateway data and create a button for each show
-    for (const key in gatewayData) {
-        const show = gatewayData[key];
+function buildDynamicButtons(type, containerSelector) {
+    const container = document.querySelector(containerSelector);
+    if (!container || !siteData.content || !siteData.content[type]) return;
+    container.innerHTML = '';
+    for (const key in siteData.content[type]) {
+        const item = siteData.content[type][key];
         const button = document.createElement('button');
         button.className = 'btn';
-        button.textContent = show.title; // Use the title from the JSON
-        
-        // Add description as a hover tooltip
-        button.title = show.description; 
-        
-        // IMPORTANT: We use an event listener instead of 'onclick' in the HTML
-        button.dataset.gatewayKey = key; // Add a data attribute to identify the button
-        button.addEventListener('click', () => loadGateway(key));
-        
-        buttonContainer.appendChild(button);
+        button.textContent = item.title;
+        button.title = item.description;
+        button.dataset.contentKey = key;
+        button.dataset.contentType = type;
+        button.addEventListener('click', () => loadContent(type, key));
+        container.appendChild(button);
     }
 }
 
-// --- 3. This function is called when a user clicks a Gateway button ---
-function loadGateway(gatewayKey) {
-  if (!gatewayData[gatewayKey]) {
-    console.error("Gateway not found:", gatewayKey);
-    return;
-  }
-
-  shuffleArray(gatewayData[gatewayKey].playlist); 
-
-  currentGatewayKey = gatewayKey;
-  // --- NEW: Highlight the active button ---
-  // First, remove the 'active' class from all buttons
-  const allButtons = document.querySelectorAll('#gateway-buttons .btn');
-  allButtons.forEach(button => button.classList.remove('active'));
-
-  // Now, find the specific button that was clicked and add the 'active' class
-  // We need to find the button that corresponds to the gatewayKey
-  const buttonsArray = Array.from(allButtons);
-  const activeButton = buttonsArray.find(button => button.dataset.gatewayKey === gatewayKey);
-  if (activeButton) {
-      activeButton.classList.add('active');
-  }
-  
-  currentVideoIndex = 0;
-
-  // Show the player and hide the selection buttons
-  document.querySelector('.gateway-player-wrapper').style.display = 'flex';
-  
-  document.getElementById('gateway-title').innerText = gatewayData[currentGatewayKey].title;
-
-  if (gatewayPlayer) {
-    // If a player exists, just load the new playlist into it
-    loadVideoInPlaylist(currentVideoIndex);
-  } else {
-    // If it's the first time, create the player
-    gatewayPlayer = new YT.Player('gateway-player', {
-      height: '390',
-      width: '640',
-      playerVars: {
-          'playsinline': 1 // Important for mobile devices
-      },
-      events: {
-        'onReady': onGatewayPlayerReady,
-        'onStateChange': onGatewayPlayerStateChange
-      }
+function buildSiteLinks() {
+    const container = document.getElementById('site-links-container');
+    if (!container || !siteData.siteLinks) return;
+    container.innerHTML = '';
+    siteData.siteLinks.forEach(link => {
+        if (link.linkText && link.linkUrl) {
+            const a = document.createElement('a');
+            a.href = link.linkUrl;
+            a.textContent = link.linkText;
+            a.target = '_blank';
+            container.appendChild(a);
+        }
     });
-  }
 }
 
-// --- 4. These functions control the playlist ---
+// --- Player Logic ---
+function onYouTubeIframeAPIReady() {
+  // This function is CALLED BY THE YOUTUBE API. It does nothing on its own.
+  // We will create the player instance on the first click.
+}
+
+function loadContent(type, key) {
+    const contentData = siteData.content[type][key];
+    if (!contentData) {
+        console.error("Content not found:", type, key);
+        return;
+    }
+    
+    // --- 1. PREPARE DATA ---
+    currentContentType = type;
+    currentContentKey = key;
+    currentVideoIndex = 0;
+
+    if (contentData.playlist) {
+        shuffleArray(contentData.playlist);
+    }
+    
+    // --- 2. UPDATE VISUALS ---
+    createSidebarVideo(contentData.leftSidebarVideoId, document.getElementById('left-sidebar'));
+    createSidebarVideo(contentData.rightSidebarVideoId, document.getElementById('right-sidebar'));
+    
+    // Highlight the active button
+    document.querySelectorAll('.btn').forEach(b => b.classList.remove('active'));
+    // Use a more robust selector to find the button
+    const activeButton = document.querySelector(`.btn[data-content-key='${key}']`);
+    if (activeButton) activeButton.classList.add('active');
+
+    // ** THIS IS THE CRITICAL FIX **
+    // Find the wrapper and explicitly set its display style to flex
+    const playerWrapper = document.querySelector('.gateway-player-wrapper');
+    if (playerWrapper) {
+        playerWrapper.style.display = 'flex';
+    } else {
+        console.error("FATAL: Could not find .gateway-player-wrapper element!");
+    }
+    
+    // --- 3. LOAD OR CREATE THE PLAYER ---
+    if (gatewayPlayer && typeof gatewayPlayer.loadVideoById === 'function') {
+        loadVideoInPlaylist(0);
+    } else {
+        gatewayPlayer = new YT.Player('gateway-player', {
+            playerVars: { 'playsinline': 1 },
+            events: {
+                'onReady': onGatewayPlayerReady,
+                'onStateChange': onGatewayPlayerStateChange
+            }
+        });
+    }
+}
+
 function onGatewayPlayerReady(event) {
-  loadVideoInPlaylist(currentVideoIndex);
+    // This function is only called ONCE by the API when the player is first created and ready.
+    setupPlayerControls(); // <-- ADD THE CALL HERE. IT IS NOW SAFE
+
+    // NOW it's safe to load the video.
+    loadVideoInPlaylist(currentVideoIndex);
+    
+   // Add the state change listener only once the player is ready
+    event.target.addEventListener('onStateChange', onGatewayPlayerStateChange);  
 }
 
 function loadVideoInPlaylist(index) {
-    const playlist = gatewayData[currentGatewayKey].playlist;
+    // Check if the player and its functions are actually ready before trying to use them.
+    if (!gatewayPlayer || typeof gatewayPlayer.loadVideoById !== 'function') {
+        console.error("Player is not ready or does not exist.");
+        return;
+    }
 
-    // Check if the requested video index is valid (within the playlist)
+    const playlist = siteData.content[currentContentType][currentContentKey].playlist;
     if (index >= 0 && index < playlist.length) {
         currentVideoIndex = index;
         const video = playlist[index];
-        
-        // Load the video into the player with specified start/end times
         gatewayPlayer.loadVideoById({
             videoId: video.videoId,
-            startSeconds: video.startSeconds,
-            endSeconds: video.endSeconds
+            startSeconds: parseInt(video.startSeconds || 0),
+            endSeconds: parseInt(video.endSeconds || 0)
         });
-        
-        // Update the title to show what's currently playing
         document.getElementById('gateway-title').innerText = `Now Playing: ${video.title}`;
     } else {
-        // This runs when the playlist is finished (e.g., trying to load a video beyond the last one)
-        if (gatewayPlayer) {
-            gatewayPlayer.stopVideo();
-        }
-        
-        // Reset the title to show the name of the playlist that just ended
-        document.getElementById('gateway-title').innerText = `Playlist finished: ${gatewayData[currentGatewayKey].title}`;
+        if(gatewayPlayer.stopVideo) gatewayPlayer.stopVideo();
+        const mainTitle = siteData.content[currentContentType][currentContentKey].title;
+        document.getElementById('gateway-title').innerText = `Playlist finished: ${mainTitle}`;
     }
 }
 
-
-
 function onGatewayPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.ENDED) {
-    loadVideoInPlaylist(currentVideoIndex + 1);
-  }
+    if (event.data == YT.PlayerState.ENDED) {
+        loadVideoInPlaylist(currentVideoIndex + 1);
+    }
 }
 
-
-// --- 5. Add functionality to our Next/Previous buttons (and a new Back button) ---
-document.addEventListener('DOMContentLoaded', () => {
-    // This button already exists
+function setupPlayerControls() {
     document.getElementById('next-video').addEventListener('click', () => {
         loadVideoInPlaylist(currentVideoIndex + 1);
     });
@@ -209,4 +215,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('prev-video').addEventListener('click', () => {
         loadVideoInPlaylist(currentVideoIndex - 1);
     });
-    });
+}
