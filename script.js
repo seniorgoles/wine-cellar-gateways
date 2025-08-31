@@ -48,13 +48,13 @@ unmuteButton.addEventListener('click', function() {
 // ====================================================================
 // ===                UPGRADED GATEWAY PLAYER LOGIC                 ===
 // ====================================================================
-
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]]; // Swap elements
   }
 }
+
 let gatewayData = {}; // This will store our shows.json data
 let gatewayPlayer;    // This will be our new YouTube player instance
 let currentGatewayKey = '';
@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // --- 2. Dynamically build the selection buttons ---
 function buildGatewayButtons() {
+    document.querySelector('.gateway-player-wrapper').style.display = 'none'; // <-- ADD THIS LINE
     const buttonContainer = document.getElementById('gateway-buttons');
     if (!buttonContainer) return;
 
@@ -100,6 +101,7 @@ function buildGatewayButtons() {
         button.title = show.description; 
         
         // IMPORTANT: We use an event listener instead of 'onclick' in the HTML
+        button.dataset.gatewayKey = key; // Add a data attribute to identify the button
         button.addEventListener('click', () => loadGateway(key));
         
         buttonContainer.appendChild(button);
@@ -112,13 +114,28 @@ function loadGateway(gatewayKey) {
     console.error("Gateway not found:", gatewayKey);
     return;
   }
+
   shuffleArray(gatewayData[gatewayKey].playlist); 
+
   currentGatewayKey = gatewayKey;
+  // --- NEW: Highlight the active button ---
+  // First, remove the 'active' class from all buttons
+  const allButtons = document.querySelectorAll('#gateway-buttons .btn');
+  allButtons.forEach(button => button.classList.remove('active'));
+
+  // Now, find the specific button that was clicked and add the 'active' class
+  // We need to find the button that corresponds to the gatewayKey
+  const buttonsArray = Array.from(allButtons);
+  const activeButton = buttonsArray.find(button => button.dataset.gatewayKey === gatewayKey);
+  if (activeButton) {
+      activeButton.classList.add('active');
+  }
+  
   currentVideoIndex = 0;
 
   // Show the player and hide the selection buttons
-  document.querySelector('.gateway-player-container').style.display = 'block';
-  document.getElementById('gateway-selection-container').style.display = 'none';
+  document.querySelector('.gateway-player-wrapper').style.display = 'flex';
+  
   document.getElementById('gateway-title').innerText = gatewayData[currentGatewayKey].title;
 
   if (gatewayPlayer) {
@@ -147,21 +164,33 @@ function onGatewayPlayerReady(event) {
 
 function loadVideoInPlaylist(index) {
     const playlist = gatewayData[currentGatewayKey].playlist;
+
+    // Check if the requested video index is valid (within the playlist)
     if (index >= 0 && index < playlist.length) {
         currentVideoIndex = index;
         const video = playlist[index];
+        
+        // Load the video into the player with specified start/end times
         gatewayPlayer.loadVideoById({
             videoId: video.videoId,
             startSeconds: video.startSeconds,
             endSeconds: video.endSeconds
         });
-        // Update the main gateway title with the current video's title
-        document.getElementById('gateway-title').innerText = `${gatewayData[currentGatewayKey].title} - Now Playing: ${video.title}`;
+        
+        // Update the title to show what's currently playing
+        document.getElementById('gateway-title').innerText = `Now Playing: ${video.title}`;
     } else {
-        // End of playlist, show the selection screen again
-        goBackToGatewaySelection();
+        // This runs when the playlist is finished (e.g., trying to load a video beyond the last one)
+        if (gatewayPlayer) {
+            gatewayPlayer.stopVideo();
+        }
+        
+        // Reset the title to show the name of the playlist that just ended
+        document.getElementById('gateway-title').innerText = `Playlist finished: ${gatewayData[currentGatewayKey].title}`;
     }
 }
+
+
 
 function onGatewayPlayerStateChange(event) {
   if (event.data == YT.PlayerState.ENDED) {
@@ -169,11 +198,6 @@ function onGatewayPlayerStateChange(event) {
   }
 }
 
-function goBackToGatewaySelection() {
-    document.querySelector('.gateway-player-container').style.display = 'none';
-    document.getElementById('gateway-selection-container').style.display = 'block';
-    if(gatewayPlayer) gatewayPlayer.stopVideo();
-}
 
 // --- 5. Add functionality to our Next/Previous buttons (and a new Back button) ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -185,15 +209,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('prev-video').addEventListener('click', () => {
         loadVideoInPlaylist(currentVideoIndex - 1);
     });
-
-    // We can add a "Back to Shows" button for a better user experience
-    // Let's create it dynamically in the controls area
-    const controls = document.getElementById('gateway-controls');
-    if(controls) {
-        const backButton = document.createElement('button');
-        backButton.id = 'back-to-selection';
-        backButton.textContent = 'Back to Shows';
-        backButton.addEventListener('click', goBackToGatewaySelection);
-        controls.appendChild(backButton);
-    }
-});
+    });
