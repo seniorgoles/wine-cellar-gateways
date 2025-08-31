@@ -24,141 +24,63 @@
 
 <!-- ======================= Hero Section with Video Background ======================= -->
 <section id="hero">
-
-    <div class="hero-video-wrapper">
-        <iframe
-            id="hero-video"
-            src="https://www.youtube.com/embed/advBG64C_3Q?autoplay=1&mute=1&loop=1&playlist=advBG64C_3Q&controls=0&showinfo=0&autohide=1&modestbranding=1&enablejsapi=1"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-        </iframe>
+    <!-- THIS DIV MUST HAVE THE ID 'hero-video-wrapper' -->
+    <div id="hero-video-wrapper" class="hero-video-wrapper"> 
+        <!-- JS will inject the iframe here -->
     </div>
-
-<div class="hero-content">
-    <h1>Whispers: Every Bottle Tells a Story.</h1>
-    <a href="#our-wines" class="btn">Discover Our Collection</a>
-
-    <!-- === ADD THIS NEW BUTTON CODE === -->
-    <div id="unmute-button" class="muted">
-        <!-- Muted Speaker Icon -->
-        <svg class="icon-muted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM19 12c0 .82-.15 1.61-.41 2.34l1.53 1.53c.56-1.17.88-2.48.88-3.87s-.32-2.7-.88-3.87l-1.53 1.53c.26.73.41 1.52.41 2.34z"/></svg>
-        <!-- Unmuted Speaker Icon -->
-        <svg class="icon-unmuted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+    <div class="hero-content">
+        <h1>Whispers: Every Bottle Tells a Story.</h1>
+        <a href="#our-wines" class="btn">Discover Our Collection</a>
     </div>
-
-</div>
-
-
-
-
-
-
-    
 </section>
 
     <!-- ======================= "Our Wines" Section with Video Placeholders ======================= -->
-    <main>
-        <section id="our-wines" class="wine-section">
+<main>
+    <section id="our-wines" class="wine-section dynamic-section">
+        <div class="background-video-wrapper">
+            <!-- Wines Background Video will be injected here by JS -->
+        </div>
+        <div class="section-content">
             <h2>Our Wines</h2>
-            <div class="wine-grid">
-                
-                <!-- Wine 1: Solaris Ice Wine -->
-                <div class="wine-card">
-                    <div class="wine-video-container">
-                        <!-- === TODO: Place your YouTube iframe embed for Solaris Ice Wine here === -->
-                        <!-- Example: <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID?..." ...></iframe> -->
-                        <div class="video-placeholder">Animation for Solaris Ice Wine</div>
-                    </div>
-                    <h3>Solaris Ice Wine</h3>
-                </div>
-                
-                <!-- Wine 2: Midnight Merlot -->
-                <div class="wine-card">
-                    <div class="wine-video-container">
-                        <!-- === TODO: Place your YouTube iframe embed for Midnight Merlot here === -->
-                        <div class="video-placeholder">Animation for Midnight Merlot</div>
-                    </div>
-                    <h3>Midnight Merlot</h3>
-                </div>
-
-                <!-- Wine 3: Golden Riesling -->
-                <div class="wine-card">
-                    <div class="wine-video-container">
-                        <!-- === TODO: Place your YouTube iframe embed for Golden Riesling here === -->
-                        <div class="video-placeholder">Animation for Golden Riesling</div>
-                    </div>
-                    <h3>Golden Riesling</h3>
-                </div>
-
-                <!-- Wine 4: Crimson Cabernet -->
-                <div class="wine-card">
-                    <div class="wine-video-container">
-                        <!-- === TODO: Place your YouTube iframe embed for Crimson Cabernet here === -->
-                        <div class="video-placeholder">Animation for Crimson Cabernet</div>
-                    </div>
-                    <h3>Crimson Cabernet</h3>
-                </div>
-
-                <!-- Wine 5: Aurora Rosé -->
-                <div class="wine-card">
-                   <div class="wine-video-container">
-                        <!-- === TODO: Place your YouTube iframe embed for Aurora Rosé here === -->
-                        <div class="video-placeholder">Animation for Aurora Rosé</div>
-                    </div>
-                    <h3>Aurora Rosé</h3>
-                </div>
-
-                <!-- Wine 6: Starfall Chardonnay -->
-                <div class="wine-card">
-                    <div class="wine-video-container">
-                        <!-- === TODO: Place your YouTube iframe embed for Starfall Chardonnay here === -->
-                        <div class="video-placeholder">Animation for Starfall Chardonnay</div>
-                    </div>
-                    <h3>Starfall Chardonnay</h3>
-                </div>
-
+            <div id="wine-buttons-container" class="dynamic-buttons-grid">
+                <!-- Wine buttons will be dynamically inserted here -->
             </div>
-        </section>
+        </div>
+    </section>
 
  
  <!-- ... (after your "Our Wines" section) ... -->
 
 <!-- ======================= Gateways Section ======================= -->
-<section id="gateways" class="gateways-section">
-    <h2>Gateways to Our Stories</h2>
-
-    <div id="gateway-selection-container">
-        <p>Select a show to begin the experience.</p>
-        <div id="gateway-buttons">
-            <!-- Buttons will be dynamically inserted here by JavaScript -->
-        </div>
+<section id="gateways" class="gateways-section dynamic-section">
+    <div class="background-video-wrapper">
+        <!-- Gateways Background Video will be injected here by JS -->
     </div>
-
-    <div class="gateway-player-wrapper" style="display: none;">
-        <div class="sidebar-video">
-            <!-- TODO: Add your looping YouTube embed for the left side video -->
-       <iframe src="https://www.youtube.com/embed/ETg9ULatCa0?autoplay=1&mute=1&loop=1&playlist=ETg9ULatCa0&controls=0&showinfo=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-        
-        
-        
+    <div class="section-content">
+        <h2>Gateways to Our Stories</h2>
+        <div id="gateway-selection-container">
+            <p>Select a show to begin the experience.</p>
+            <div id="gateway-buttons" class="dynamic-buttons-grid">
+                <!-- Gateway buttons will be dynamically inserted here -->
+            </div>
         </div>
-
-       <div class="main-player-area">
-       <div id="gateway-player"></div>
-       <div id="gateway-controls">
-           <button id="prev-video">Previous</button>
-           <button id="next-video">Next</button>
-           <!-- The title now lives inside the controls container -->
-           <h3 id="gateway-title">Select a show to begin</h3> 
-       </div>
-   </div>
-
-        <div class="sidebar-video">
-            <!-- TODO: Add your looping YouTube embed for the right side video -->
-                   <iframe src="https://www.youtube.com/embed/Ath8nj_qE_w?autoplay=1&mute=1&loop=1&playlist=Ath8nj_qE_w&controls=0&showinfo=0&modestbranding=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+        
+        <div class="gateway-player-wrapper" style="display: none;">
+            <div class="sidebar-video" id="left-sidebar"></div>
+            <div class="main-player-area">
+                <div id="gateway-player"></div>
+                <div id="gateway-controls">
+                    <button id="prev-video">Previous</button>
+                    <button id="next-video">Next</button>
+                    <h3 id="gateway-title">Select a show to begin</h3> 
+                </div>
+            </div>
+            <div class="sidebar-video" id="right-sidebar"></div>
+        </div>
+        <!-- END OF CRITICAL PART -->
+        
+        <div id="site-links-container">
+            <!-- Links will be dynamically inserted here -->
         </div>
     </div>
 </section>
