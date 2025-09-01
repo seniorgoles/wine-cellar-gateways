@@ -25,6 +25,7 @@
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "",
         "playlist": [
           {
             "videoId": "kUB1FlKAh00",
@@ -211,6 +212,7 @@
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "",
         "playlist": [
           {
             "videoId": "8hYMOcBDV3Y",
@@ -343,6 +345,7 @@
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "",
         "playlist": [
           {
             "videoId": "198xlNXW_fE",
@@ -493,6 +496,7 @@
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "",
         "playlist": [
           {
             "videoId": "6dCqztZqo-Q",
@@ -534,6 +538,106 @@
       }
     },
     "wines": {
+      "chardonnay": {
+        "sheetName": "chardonnay",
+        "title": "Chardonnay White Wine",
+        "description": "A rare treasure...",
+        "genre": "White Wine",
+        "type": "wine",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "chardonnay whit.png",
+        "playlist": [
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "The Story of Solaris Ice Wine"
+          },
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Perfect Pairings for Solaris"
+          }
+        ]
+      },
+      "pinot_grigio": {
+        "sheetName": "pinot_grigio",
+        "title": "Pinot Grigio White Wine",
+        "description": "A rare treasure...",
+        "genre": "White Wine",
+        "type": "wine",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "pinot.png",
+        "playlist": [
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "The Story of Midnight Ice Wine"
+          },
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Perfect Pairings for Midnight"
+          }
+        ]
+      },
+      "rose": {
+        "sheetName": "rose",
+        "title": "Rose Wine",
+        "description": "A rare treasure...",
+        "genre": "Red Wine",
+        "type": "wine",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "rose.png",
+        "playlist": [
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "The Story of Solaris Ice Wine"
+          },
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Perfect Pairings for Solaris"
+          }
+        ]
+      },
+      "cabernet": {
+        "sheetName": "cabernet",
+        "title": "Cabernet Sauvignon Reserve",
+        "description": "A rare treasure...",
+        "genre": "Red Wine",
+        "type": "wine",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "cabernet savignon reserve red.png",
+        "playlist": [
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "The Story of Solaris Ice Wine"
+          },
+          {
+            "videoId": "advBG64C_3Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Perfect Pairings for Solaris"
+          }
+        ]
+      },
       "solarice": {
         "sheetName": "solarice",
         "title": "Solaris Ice Wine",
@@ -543,6 +647,7 @@
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "ice.png",
         "playlist": [
           {
             "videoId": "advBG64C_3Q",
@@ -560,25 +665,26 @@
       },
       "midnight": {
         "sheetName": "midnight",
-        "title": "Midnight Merlot",
+        "title": "Midnight Merlot Red Wine",
         "description": "Deep and comforting...",
         "genre": "Merlot",
         "type": "wine",
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "merlot.png",
         "playlist": [
           {
             "videoId": "advBG64C_3Q",
             "startSeconds": 0,
             "endSeconds": 0,
-            "title": "The Story of Midnight Ice Wine"
+            "title": "The Story of Solaris Ice Wine"
           },
           {
             "videoId": "advBG64C_3Q",
             "startSeconds": 0,
             "endSeconds": 0,
-            "title": "Perfect Pairings for Midnight"
+            "title": "Perfect Pairings for Solaris"
           }
         ]
       }
