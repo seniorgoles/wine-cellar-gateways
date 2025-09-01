@@ -84,10 +84,22 @@ function buildDynamicButtons(type, containerSelector) {
     if (!container || !siteData.content || !siteData.content[type]) return;
     container.innerHTML = '';
     for (const key in siteData.content[type]) {
-        const item = siteData.content[type][key];
-        const button = document.createElement('button');
-        button.className = 'btn';
+    const item = siteData.content[type][key];
+    const button = document.createElement('button');
+    button.className = 'btn';
+
+    // === THIS IS THE NEW PART ===
+    // If the item has a buttonImage, use it as the background.
+    // Otherwise, just use the title as text.
+    if (item.buttonImage) {
+        button.style.backgroundImage = `url('images/${item.buttonImage}')`;
+        // Optional: Add the title as an accessible label for screen readers
+        button.setAttribute('aria-label', item.title);
+    } else {
         button.textContent = item.title;
+    }
+    // === END OF NEW PART ===
+
         button.title = item.description;
         button.dataset.contentKey = key;
         button.dataset.contentType = type;
