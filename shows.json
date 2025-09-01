@@ -19,13 +19,13 @@
       "lostLove": {
         "sheetName": "lostLove",
         "title": "The Lost Love Series",
-        "description": "A journey through heartbreak...",
+        "description": "A journey through heartbreak music videos",
         "genre": "Romance",
         "type": "gateway",
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "",
+        "buttonImage": "lost_love.png",
         "playlist": [
           {
             "videoId": "kUB1FlKAh00",
@@ -206,13 +206,13 @@
       "passion": {
         "sheetName": "passion",
         "title": "Passionate Series",
-        "description": "Passionate melodies",
+        "description": "Passionate melodies music videos",
         "genre": "Romance",
         "type": "gateway",
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "",
+        "buttonImage": "passionate.png",
         "playlist": [
           {
             "videoId": "8hYMOcBDV3Y",
@@ -339,13 +339,13 @@
       "love": {
         "sheetName": "love",
         "title": "Love Series",
-        "description": "Everlasting love songs",
+        "description": "Everlasting love songs music videos",
         "genre": "Romance",
         "type": "gateway",
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
         "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "",
+        "buttonImage": "love.png",
         "playlist": [
           {
             "videoId": "198xlNXW_fE",
@@ -490,8 +490,57 @@
       "edgy": {
         "sheetName": "edgy",
         "title": "Edgy Series",
-        "description": "Rough and tough",
+        "description": "Edgy music videos",
         "genre": "Edgy",
+        "type": "gateway",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "edgy.png",
+        "playlist": [
+          {
+            "videoId": "6dCqztZqo-Q",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
+          },
+          {
+            "videoId": "mY4FS2xmCHM",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
+          },
+          {
+            "videoId": "UUwoNsd_0CI",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 Gangsters"
+          },
+          {
+            "videoId": "VH7dHCKbkX4",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 The Royal Canadian Mounted Police"
+          },
+          {
+            "videoId": "BXFju9vpGGo",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
+          },
+          {
+            "videoId": "DePO9B62PAo",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+          }
+        ]
+      },
+      "demoShow": {
+        "sheetName": "demoShow",
+        "title": "Tech Demo Show",
+        "description": "A work in progress.",
+        "genre": "Testing",
         "type": "gateway",
         "isVisible": true,
         "leftSidebarVideoId": "ETg9ULatCa0",
@@ -533,6 +582,169 @@
             "startSeconds": 0,
             "endSeconds": 0,
             "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+          }
+        ]
+      },
+      "games": {
+        "sheetName": "games",
+        "title": "Epic games",
+        "description": "A work in progress.",
+        "genre": "Gaming",
+        "type": "gateway",
+        "isVisible": true,
+        "leftSidebarVideoId": "ETg9ULatCa0",
+        "rightSidebarVideoId": "Ath8nj_qE_w",
+        "buttonImage": "",
+        "playlist": [
+          {
+            "videoId": "ktjZn9pPp_8",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 Can\u2019t Let This Love Go (refresh)"
+          },
+          {
+            "videoId": "nL8W7SXRzO0",
+            "startSeconds": 0,
+            "endSeconds": 0,
+            "title": "Whispers Of Aurorachrome \u266a \u2013 Until the Morning refresh version"
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "",
+            "title": ""
+          },
+          {
+            "videoId": "",
+            "startSeconds": "",
+            "endSeconds": "g",
+            "title": ""
           }
         ]
       }
