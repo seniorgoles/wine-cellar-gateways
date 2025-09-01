@@ -18,6 +18,9 @@ let gatewayPlayer;
 let currentContentKey = '';
 let currentContentType = '';
 let currentVideoIndex = 0;
+const ITEMS_PER_PAGE = 5; // How many shows to display at once
+let gatewayCurrentPage = 0;
+
 
 // --- Helper Functions ---
 function createBgVideo(videoId) {
@@ -76,37 +79,97 @@ function initializePage() {
     buildDynamicButtons('wines', '#wine-buttons-container');
     buildDynamicButtons('gateways', '#gateway-buttons');
     buildSiteLinks();
+    setupCarouselControls();
    
 }
 
 function buildDynamicButtons(type, containerSelector) {
     const container = document.querySelector(containerSelector);
-    if (!container || !siteData.content || !siteData.content[type]) return;
+    const allItems = siteData.content[type] ? Object.keys(siteData.content[type]) : [];
+    
+    if (!container || allItems.length === 0) return;
+
+    // Calculate total pages
+    const totalPages = Math.ceil(allItems.length / ITEMS_PER_PAGE);
+
+    // Clear the button container
     container.innerHTML = '';
-    for (const key in siteData.content[type]) {
-    const item = siteData.content[type][key];
-    const button = document.createElement('button');
-    button.className = 'btn';
 
-    // === THIS IS THE NEW PART ===
-    // If the item has a buttonImage, use it as the background.
-    // Otherwise, just use the title as text.
-    if (item.buttonImage) {
-        button.style.backgroundImage = `url('images/${item.buttonImage}')`;
-        // Optional: Add the title as an accessible label for screen readers
-        button.setAttribute('aria-label', item.title);
-    } else {
-        button.textContent = item.title;
-    }
-    // === END OF NEW PART ===
+    // Get the slice of items for the current page
+    const startIndex = gatewayCurrentPage * ITEMS_PER_PAGE;
+    const endIndex = startIndex + ITEMS_PER_PAGE;
+    const pageItems = allItems.slice(startIndex, endIndex);
 
+    // Build only the buttons for the current page
+    pageItems.forEach(key => {
+        const item = siteData.content[type][key];
+        const button = document.createElement('button');
+        button.className = 'btn';
+
+        if (item.buttonImage) {
+            button.style.backgroundImage = `url('images/${item.buttonImage}')`;
+            button.style.color = 'transparent';
+        } else {
+            button.textContent = item.title;
+        }
+        
         button.title = item.description;
         button.dataset.contentKey = key;
         button.dataset.contentType = type;
         button.addEventListener('click', () => loadContent(type, key));
+        
         container.appendChild(button);
-    }
+    });
+
+    // Update the state of the carousel navigation buttons
+    updateCarouselNav(totalPages);
 }
+    function updateCarouselNav(totalPages) {
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+
+    // Handle visibility of carousel buttons based on number of items
+    if (totalPages <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+        return;
+    } else {
+        prevBtn.style.display = 'block';
+        nextBtn.style.display = 'block';
+    }
+
+    // Disable 'Prev' button if on the first page
+    prevBtn.disabled = (gatewayCurrentPage === 0);
+
+    // Disable 'Next' button if on the last page
+    nextBtn.disabled = (gatewayCurrentPage >= totalPages - 1);
+}
+
+function setupCarouselControls() {
+    document.getElementById('carousel-prev').addEventListener('click', () => {
+        if (gatewayCurrentPage > 0) {
+            gatewayCurrentPage--;
+            // Re-build ONLY the gateway buttons
+            buildDynamicButtons('gateways', '#gateway-buttons');
+        }
+    });
+
+    document.getElementById('carousel-next').addEventListener('click', () => {
+        gatewayCurrentPage++;
+        // Re-build ONLY the gateway buttons
+        buildDynamicButtons('gateways', '#gateway-buttons');
+    });
+}
+
+
+
+
+
+
+
+
+
+
 
 function buildSiteLinks() {
     const container = document.getElementById('site-links-container');
@@ -135,7 +198,12 @@ function loadContent(type, key) {
         console.error("Content not found:", type, key);
         return;
     }
-    
+     // === THIS IS THE MAGIC LINE ===
+    document.getElementById('gateways').scrollIntoView({ behavior: 'smooth' });
+
+    // --- 1. PREPARE DATA ---
+ 
+ 
     // --- 1. PREPARE DATA ---
     currentContentType = type;
     currentContentKey = key;
@@ -214,8 +282,15 @@ function loadVideoInPlaylist(index) {
 }
 
 function onGatewayPlayerStateChange(event) {
+    // This event fires every time the player's state changes (playing, paused, ended, etc.)
     if (event.data == YT.PlayerState.ENDED) {
-        loadVideoInPlaylist(currentVideoIndex + 1);
+        // The current video has just finished. Time to load the next one.
+        const playlist = siteData.content[currentContentType][currentContentKey].playlist;
+        
+        // Use the modulo operator to loop back to the beginning
+        const nextVideoIndex = (currentVideoIndex + 1) % playlist.length;
+        
+        loadVideoInPlaylist(nextVideoIndex);
     }
 }
 
