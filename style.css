@@ -488,3 +488,122 @@ footer { background-color: var(--color-charcoal); color: var(--color-cream); pad
     transform: scale(1.05);
     box-shadow: 0 0 25px 5px var(--color-gold); /* The magical glow effect */
 }  
+
+/* --- New Styling for Gateway Show Buttons --- */
+
+#gateway-buttons .btn {
+    /* --- General Appearance --- */
+    background-color: var(--color-charcoal); /* A fallback color */
+    border: 1px solid var(--color-gold);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 1.2em;
+    padding: 10px; /* Padding for text-only buttons */
+    
+    /* --- Sizing and Image Control --- */
+    width: 250px;
+    height: 150px;
+    background-size: cover; /* Cover ensures the image fills the button */
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* --- Effects --- */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    display: flex; /* Use flexbox to center the text */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover effect for ALL gateway buttons */
+#gateway-buttons .btn:hover {
+    transform: scale(1.05);
+}
+
+/* Highlight style for the ACTIVE button (image or text) */
+#gateway-buttons .btn.active {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px 5px var(--color-burgundy); /* Let's use burgundy for shows */
+}
+
+/* --- New Styling for Custom Player Controls --- */
+
+/* This targets BOTH the Previous and Next buttons */
+#gateway-controls #prev-video,
+#gateway-controls #next-video {
+    /* --- Step 1: Remove all default button styling --- */
+    background-color: transparent;
+    border: none;
+    font-size: 0; /* This makes the original text invisible */
+    color: transparent;
+    padding: 0;
+
+    /* --- Step 2: Set the size for our new image buttons --- */
+    width: 200px;
+    height: 80px;
+
+    /* --- Step 3: General image settings --- */
+    background-size: contain; /* Contain ensures we see the whole bottle */
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    /* --- Step 4: Add a subtle transition for a premium feel --- */
+    transition: transform 0.2s ease;
+}
+
+/* Add a hover effect to make them feel interactive */
+#gateway-controls #prev-video:hover,
+#gateway-controls #next-video:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* --- Step 5: Assign the specific image to each button --- */
+#gateway-controls #prev-video {
+    background-image: url('images/prev_button.png');
+}
+
+#gateway-controls #next-video {
+    background-image: url('images/next_button.png');
+}
+
+/* --- New Styling for Show Carousel --- */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.carousel-nav-btn {
+    background-color: transparent;
+    border: 2px solid var(--color-charcoal);
+    color: var(--color-charcoal);
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-nav-btn:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-white);
+}
+
+/* Style for when a button is disabled (e.g., 'Prev' on the first page) */
+.carousel-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* This will be the container for the actual show buttons */
+#gateway-buttons {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent buttons from wrapping to the next line */
+    gap: 15px;
+    overflow: hidden; /* This is part of the magic, hides non-visible buttons */
+}`` 
