@@ -1,7 +1,6 @@
 {
   "siteConfig": {
     "heroBgVideoId": "advBG64C_3Q",
-    "winesBgVideoId": "MyrCSG9wtkE",
     "gatewaysBgVideoId": "NPXNAVb-_4Q"
   },
   "siteLinks": [
@@ -14,892 +13,826 @@
       "linkUrl": "https://store.pillitteri.com/"
     }
   ],
-  "content": {
-    "gateways": {
-      "lostLove": {
-        "sheetName": "lostLove",
-        "title": "The Lost Love Series",
-        "description": "A journey through heartbreak music videos",
-        "genre": "Romance",
-        "type": "gateway",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "lost_love.png",
-        "playlist": [
-          {
-            "videoId": "kUB1FlKAh00",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Lost"
-          },
-          {
-            "videoId": "OYk5DuLyvq0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Holding On to Memories"
-          },
-          {
-            "videoId": "7XtqLpgx_28",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Unseen Storms"
-          },
-          {
-            "videoId": "LCOLIfAlnkE",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 We're All We Need"
-          },
-          {
-            "videoId": "nsg39MTlZVw",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Falling for Love Again"
-          },
-          {
-            "videoId": "gl-lxYzHZWY",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 If I Could Change"
-          },
-          {
-            "videoId": "Ux2_1v_JfT0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Lost In The Silence"
-          },
-          {
-            "videoId": "sLpl2G-BJ4k",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Nightmares"
-          },
-          {
-            "videoId": "ZkGXXcPQV_0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 In the Rush of the Night"
-          },
-          {
-            "videoId": "iCcQTZqQk6Y",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Wish You Were Near"
-          },
-          {
-            "videoId": "k3vOaKQaZPw",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows of What We Had"
-          },
-          {
-            "videoId": "yIufrZijvAs",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Torn Heart"
-          },
-          {
-            "videoId": "NmtN9kQhwb0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Twilight Haze "
-          },
-          {
-            "videoId": "ugaoMIY6n9o",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 We Find Our Place"
-          },
-          {
-            "videoId": "HcyGKX6PM1c",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 No Solace to Find (refresh)"
-          },
-          {
-            "videoId": "jxVpiWFZ9Hc",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Gathered Secrets "
-          },
-          {
-            "videoId": "R83neX4g2Vc",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 In the Spotlight "
-          },
-          {
-            "videoId": "rkbZkBAR7F4",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Shadow Memories"
-          },
-          {
-            "videoId": "CCw6-l7hKt0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Love\u2019s Smoky Haze"
-          },
-          {
-            "videoId": "a6W5pZ6mEWc",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Lost Lover (refresh)"
-          },
-          {
-            "videoId": "N0Zny6wFiuk",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Tangled Mess"
-          },
-          {
-            "videoId": "1YdzryiqTIg",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Reflections Refresh version"
-          },
-          {
-            "videoId": "ktjZn9pPp_8",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Can\u2019t Let This Love Go (refresh)"
-          },
-          {
-            "videoId": "nL8W7SXRzO0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Until the Morning refresh version"
-          },
-          {
-            "videoId": "z85cmPFEQc4",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Lost Dreams"
-          },
-          {
-            "videoId": "J69muoAuR3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013You Were My Light "
-          },
-          {
-            "videoId": "DgNlFhQtrCk",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Gone Too Soon"
-          },
-          {
-            "videoId": "pUQH_FkqmFk",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Searching for the Reasons"
-          },
-          {
-            "videoId": "dZ2hAffRZVM",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Transform"
-          }
-        ]
-      },
-      "passion": {
-        "sheetName": "passion",
-        "title": "Passionate Series",
-        "description": "Passionate melodies music videos",
-        "genre": "Romance",
-        "type": "gateway",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "passionate.png",
-        "playlist": [
-          {
-            "videoId": "8hYMOcBDV3Y",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Circles of Joy"
-          },
-          {
-            "videoId": "IF673dbWOT8",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Set The World On Fire"
-          },
-          {
-            "videoId": "L8X_1Udcf0k",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Art Deranged"
-          },
-          {
-            "videoId": "OGXfI25JBLA",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Hearts"
-          },
-          {
-            "videoId": "IKb7GHgJuoE",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Veil of Shadows"
-          },
-          {
-            "videoId": "qoQz8biGCbQ",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Let\u2019s Conquer This Space"
-          },
-          {
-            "videoId": "YBqiUyAdLsY",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Supercar Dreams"
-          },
-          {
-            "videoId": "dtg9h-o6DzA",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 We\u2019re On A Roll"
-          },
-          {
-            "videoId": "OpUrpKS6t6g",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Anticipation"
-          },
-          {
-            "videoId": "lsK-HesGlTg",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Girls Make Me Sad"
-          },
-          {
-            "videoId": "55opJ56brno",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Rhythm of Dance"
-          },
-          {
-            "videoId": "oqMwEbnixyg",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Pulse "
-          },
-          {
-            "videoId": "sLi_sqz3eMo",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Rush"
-          },
-          {
-            "videoId": "vcj_kB_8xqg",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows"
-          },
-          {
-            "videoId": "zUEPn6oRsVo",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Dissolve"
-          },
-          {
-            "videoId": "MQyY8ccX53M",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Release"
-          },
-          {
-            "videoId": "Vg8iB8o7Y2k",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Waves of Despair"
-          },
-          {
-            "videoId": "yRE_Hj4iscQ",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Mystery"
-          },
-          {
-            "videoId": "pkOXAj6kbis",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Ascension "
-          },
-          {
-            "videoId": "wT6rR8ylvQg",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Dance All Night 2025 Symphonic Dance Party"
-          }
-        ]
-      },
-      "love": {
-        "sheetName": "love",
-        "title": "Love Series",
-        "description": "Everlasting love songs music videos",
-        "genre": "Romance",
-        "type": "gateway",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "love.png",
-        "playlist": [
-          {
-            "videoId": "198xlNXW_fE",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Vibrant Code "
-          },
-          {
-            "videoId": "KBiZIcTY5bQ",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Visions"
-          },
-          {
-            "videoId": "WQZU3Ie2Wls",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Electric World"
-          },
-          {
-            "videoId": "A2CryogHF3I",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Sparkling Glitter"
-          },
-          {
-            "videoId": "pTHk325efA8",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Under the Starry Night"
-          },
-          {
-            "videoId": "PgIzxPN8XIk",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Light Up The Night "
-          },
-          {
-            "videoId": "HmE7GH9Aumk",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Love's Lost Time"
-          },
-          {
-            "videoId": "x-LKnmqAAe8",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Love Supreme"
-          },
-          {
-            "videoId": "TketGLbNr_g",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 A Dream Come True"
-          },
-          {
-            "videoId": "w1SiMSA4_0o",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Untold Dreams"
-          },
-          {
-            "videoId": "WGlY6ilhb38",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Whispers in the Breeze"
-          },
-          {
-            "videoId": "xhIzi7fP3ME",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Locked In A Trance"
-          },
-          {
-            "videoId": "4b2kuV_Hj0M",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Delight"
-          },
-          {
-            "videoId": "6jB1deNv8Kg",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 In Perfect Spin"
-          },
-          {
-            "videoId": "MXrqcLf_JTc",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 We Spin And Twirl"
-          },
-          {
-            "videoId": "Sy5lExtAjFE",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Midnight"
-          },
-          {
-            "videoId": "GxHoNi0Hht0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 No Turning Back"
-          },
-          {
-            "videoId": "9nwCYkCVdfA",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Living For The Thrill"
-          },
-          {
-            "videoId": "7xqxDUm6414",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 We Step Into The Scene"
-          },
-          {
-            "videoId": "5MKNgm4nGeA",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Let the Rhythm Guide Us"
-          },
-          {
-            "videoId": "ELLhFhO4S-I",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Making a Splash"
-          },
-          {
-            "videoId": "ctuMJ5Qo4Kw",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Sound"
-          },
-          {
-            "videoId": "oYEj6NGT5Hs",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Horizons"
-          }
-        ]
-      },
-      "edgy": {
-        "sheetName": "edgy",
-        "title": "Edgy Series",
-        "description": "Edgy music videos",
-        "genre": "Edgy",
-        "type": "gateway",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "edgy.png",
-        "playlist": [
-          {
-            "videoId": "6dCqztZqo-Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
-          },
-          {
-            "videoId": "mY4FS2xmCHM",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
-          },
-          {
-            "videoId": "UUwoNsd_0CI",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Gangsters"
-          },
-          {
-            "videoId": "VH7dHCKbkX4",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 The Royal Canadian Mounted Police"
-          },
-          {
-            "videoId": "BXFju9vpGGo",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
-          },
-          {
-            "videoId": "DePO9B62PAo",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
-          }
-        ]
-      },
-      "demoShow": {
-        "sheetName": "demoShow",
-        "title": "Tech Demo Show",
-        "description": "A work in progress.",
-        "genre": "Testing",
-        "type": "gateway",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "",
-        "playlist": [
-          {
-            "videoId": "6dCqztZqo-Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
-          },
-          {
-            "videoId": "mY4FS2xmCHM",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
-          },
-          {
-            "videoId": "UUwoNsd_0CI",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Gangsters"
-          },
-          {
-            "videoId": "VH7dHCKbkX4",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 The Royal Canadian Mounted Police"
-          },
-          {
-            "videoId": "BXFju9vpGGo",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
-          },
-          {
-            "videoId": "DePO9B62PAo",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
-          }
-        ]
-      },
-      "games": {
-        "sheetName": "games",
-        "title": "Epic games",
-        "description": "A work in progress.",
-        "genre": "Gaming",
-        "type": "gateway",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "",
-        "playlist": [
-          {
-            "videoId": "ktjZn9pPp_8",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Can\u2019t Let This Love Go (refresh)"
-          },
-          {
-            "videoId": "nL8W7SXRzO0",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Whispers Of Aurorachrome \u266a \u2013 Until the Morning refresh version"
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "",
-            "title": ""
-          },
-          {
-            "videoId": "",
-            "startSeconds": "",
-            "endSeconds": "g",
-            "title": ""
-          }
-        ]
-      }
+  "worlds": {
+    "the_cellar": {
+      "worldId": "the_cellar",
+      "title": "The Cellar",
+      "description": "Explore our exclusive wine collection.",
+      "buttonImage": "the_cellar.png"
     },
-    "wines": {
-      "chardonnay": {
-        "sheetName": "chardonnay",
-        "title": "Chardonnay White Wine",
-        "description": "A rare treasure...",
-        "genre": "White Wine",
-        "type": "wine",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "chardonnay whit.png",
-        "playlist": [
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "The Story of Solaris Ice Wine"
-          },
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Perfect Pairings for Solaris"
-          }
-        ]
-      },
-      "pinot_grigio": {
-        "sheetName": "pinot_grigio",
-        "title": "Pinot Grigio White Wine",
-        "description": "A rare treasure...",
-        "genre": "White Wine",
-        "type": "wine",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "pinot.png",
-        "playlist": [
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "The Story of Midnight Ice Wine"
-          },
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Perfect Pairings for Midnight"
-          }
-        ]
-      },
-      "rose": {
-        "sheetName": "rose",
-        "title": "Rose Wine",
-        "description": "A rare treasure...",
-        "genre": "Red Wine",
-        "type": "wine",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "rose.png",
-        "playlist": [
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "The Story of Solaris Ice Wine"
-          },
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Perfect Pairings for Solaris"
-          }
-        ]
-      },
-      "cabernet": {
-        "sheetName": "cabernet",
-        "title": "Cabernet Sauvignon Reserve",
-        "description": "A rare treasure...",
-        "genre": "Red Wine",
-        "type": "wine",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "cabernet savignon reserve red.png",
-        "playlist": [
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "The Story of Solaris Ice Wine"
-          },
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Perfect Pairings for Solaris"
-          }
-        ]
-      },
-      "solarice": {
-        "sheetName": "solarice",
-        "title": "Solaris Ice Wine",
-        "description": "A rare treasure...",
-        "genre": "Ice Wine",
-        "type": "wine",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "ice.png",
-        "playlist": [
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "The Story of Solaris Ice Wine"
-          },
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Perfect Pairings for Solaris"
-          }
-        ]
-      },
-      "midnight": {
-        "sheetName": "midnight",
-        "title": "Midnight Merlot Red Wine",
-        "description": "Deep and comforting...",
-        "genre": "Merlot",
-        "type": "wine",
-        "isVisible": true,
-        "leftSidebarVideoId": "ETg9ULatCa0",
-        "rightSidebarVideoId": "Ath8nj_qE_w",
-        "buttonImage": "merlot.png",
-        "playlist": [
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "The Story of Solaris Ice Wine"
-          },
-          {
-            "videoId": "advBG64C_3Q",
-            "startSeconds": 0,
-            "endSeconds": 0,
-            "title": "Perfect Pairings for Solaris"
-          }
-        ]
-      }
+    "the_theater": {
+      "worldId": "the_theater",
+      "title": "The Theater",
+      "description": "Immerse yourself in our music. ",
+      "buttonImage": "the_theater.png"
+    },
+    "the_arcade": {
+      "worldId": "the_arcade",
+      "title": "The Arcade",
+      "description": "Interactive games and challenges.",
+      "buttonImage": "the_arcade.png"
+    }
+  },
+  "content": {
+    "chardonnay": {
+      "worldId": "the_cellar",
+      "contentId": "chardonnay",
+      "title": "Chardonnay White Wine",
+      "description": "A rare treasure...",
+      "buttonImage": "chardonnay whit.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 29.99,
+      "sku": "WC-001",
+      "inStock": true,
+      "genre": "White Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "chardonnay",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Solaris Ice Wine"
+        },
+        {
+          "contentId": "chardonnay",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Solaris"
+        }
+      ]
+    },
+    "pinot_grigio": {
+      "worldId": "the_cellar",
+      "contentId": "pinot_grigio",
+      "title": "Pinot Grigio White Wine",
+      "description": "A rare treasure...",
+      "buttonImage": "pinot.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 30.99,
+      "sku": "WC-002",
+      "inStock": false,
+      "genre": "White Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "pinot_grigio",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Midnight Ice Wine"
+        },
+        {
+          "contentId": "pinot_grigio",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Midnight"
+        }
+      ]
+    },
+    "rose": {
+      "worldId": "the_cellar",
+      "contentId": "rose",
+      "title": "Rose Wine",
+      "description": "A rare treasure...",
+      "buttonImage": "rose.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 31.99,
+      "sku": "WC-003",
+      "inStock": true,
+      "genre": "Red Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "rose",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Midnight Ice Wine"
+        },
+        {
+          "contentId": "rose",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Midnight"
+        }
+      ]
+    },
+    "cabernet": {
+      "worldId": "the_cellar",
+      "contentId": "cabernet",
+      "title": "Cabernet Sauvignon Reserve",
+      "description": "A rare treasure...",
+      "buttonImage": "cabernet savignon reserve red.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 32.99,
+      "sku": "WC-004",
+      "inStock": false,
+      "genre": "Red Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "cabernet",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Midnight Ice Wine"
+        },
+        {
+          "contentId": "cabernet",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Midnight"
+        }
+      ]
+    },
+    "solarice": {
+      "worldId": "the_cellar",
+      "contentId": "solarice",
+      "title": "Solaris Ice Wine",
+      "description": "A rare treasure...",
+      "buttonImage": "ice.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 33.99,
+      "sku": "WC-005",
+      "inStock": true,
+      "genre": "Ice Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "solarice",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Solaris Ice Wine"
+        },
+        {
+          "contentId": "solarice",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Solaris"
+        }
+      ]
+    },
+    "midnight": {
+      "worldId": "the_cellar",
+      "contentId": "midnight",
+      "title": "Midnight Merlot Red Wine",
+      "description": "Deep and comforting...",
+      "buttonImage": "merlot.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 34.99,
+      "sku": "WC-006",
+      "inStock": false,
+      "genre": "Merlot",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "midnight",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Midnight Ice Wine"
+        },
+        {
+          "contentId": "midnight",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Midnight"
+        }
+      ]
+    },
+    "lostLove": {
+      "worldId": "the_theater",
+      "contentId": "lostLove",
+      "title": "The Lost Love Series",
+      "description": "A journey through heartbreak music videos",
+      "buttonImage": "lost_love.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 4,
+      "sku": "AB-005",
+      "inStock": true,
+      "genre": "Romance",
+      "type": "gateway",
+      "playlist": [
+        {
+          "contentId": "lostLove",
+          "videoId": "kUB1FlKAh00",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "OYk5DuLyvq0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Holding On to Memories"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "7XtqLpgx_28",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Unseen Storms"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "LCOLIfAlnkE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We're All We Need"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "nsg39MTlZVw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Falling for Love Again"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "gl-lxYzHZWY",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 If I Could Change"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "Ux2_1v_JfT0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost In The Silence"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "sLpl2G-BJ4k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Nightmares"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "ZkGXXcPQV_0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 In the Rush of the Night"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "iCcQTZqQk6Y",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Wish You Were Near"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "k3vOaKQaZPw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows of What We Had"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "yIufrZijvAs",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Torn Heart"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "NmtN9kQhwb0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Twilight Haze "
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "ugaoMIY6n9o",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Find Our Place"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "HcyGKX6PM1c",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 No Solace to Find (refresh)"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "jxVpiWFZ9Hc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Gathered Secrets "
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "R83neX4g2Vc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 In the Spotlight "
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "rkbZkBAR7F4",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadow Memories"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "CCw6-l7hKt0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Love\u2019s Smoky Haze"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "a6W5pZ6mEWc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost Lover (refresh)"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "N0Zny6wFiuk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Tangled Mess"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "1YdzryiqTIg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Reflections Refresh version"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "ktjZn9pPp_8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Can\u2019t Let This Love Go (refresh)"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "nL8W7SXRzO0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Until the Morning refresh version"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "z85cmPFEQc4",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Lost Dreams"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "J69muoAuR3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013You Were My Light "
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "DgNlFhQtrCk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Gone Too Soon"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "pUQH_FkqmFk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Searching for the Reasons"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "dZ2hAffRZVM",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Transform"
+        }
+      ]
+    },
+    "passion": {
+      "worldId": "the_theater",
+      "contentId": "passion",
+      "title": "Passionate Series",
+      "description": "Passionate melodies music videos",
+      "buttonImage": "passionate.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 5,
+      "sku": "AB-006",
+      "inStock": true,
+      "genre": "Romance",
+      "type": "gateway",
+      "playlist": [
+        {
+          "contentId": "passion",
+          "videoId": "8hYMOcBDV3Y",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Circles of Joy"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "IF673dbWOT8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Set The World On Fire"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "L8X_1Udcf0k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Art Deranged"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "OGXfI25JBLA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Hearts"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "IKb7GHgJuoE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Veil of Shadows"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "qoQz8biGCbQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Let\u2019s Conquer This Space"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "YBqiUyAdLsY",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Supercar Dreams"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "dtg9h-o6DzA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We\u2019re On A Roll"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "OpUrpKS6t6g",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Anticipation"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "lsK-HesGlTg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Girls Make Me Sad"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "55opJ56brno",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Rhythm of Dance"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "oqMwEbnixyg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Pulse "
+        },
+        {
+          "contentId": "passion",
+          "videoId": "sLi_sqz3eMo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Rush"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "vcj_kB_8xqg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "zUEPn6oRsVo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Dissolve"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "MQyY8ccX53M",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Release"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "Vg8iB8o7Y2k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Waves of Despair"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "yRE_Hj4iscQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Mystery"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "pkOXAj6kbis",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Ascension "
+        },
+        {
+          "contentId": "passion",
+          "videoId": "wT6rR8ylvQg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Dance All Night 2025 Symphonic Dance Party"
+        }
+      ]
+    },
+    "love": {
+      "worldId": "the_theater",
+      "contentId": "love",
+      "title": "Love Series",
+      "description": "Everlasting love songs music videos",
+      "buttonImage": "love.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 6,
+      "sku": "AB-007",
+      "inStock": true,
+      "genre": "Romance",
+      "type": "gateway",
+      "playlist": [
+        {
+          "contentId": "love",
+          "videoId": "198xlNXW_fE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Vibrant Code "
+        },
+        {
+          "contentId": "love",
+          "videoId": "KBiZIcTY5bQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Visions"
+        },
+        {
+          "contentId": "love",
+          "videoId": "WQZU3Ie2Wls",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric World"
+        },
+        {
+          "contentId": "love",
+          "videoId": "A2CryogHF3I",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Sparkling Glitter"
+        },
+        {
+          "contentId": "love",
+          "videoId": "pTHk325efA8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Under the Starry Night"
+        },
+        {
+          "contentId": "love",
+          "videoId": "PgIzxPN8XIk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Light Up The Night "
+        },
+        {
+          "contentId": "love",
+          "videoId": "HmE7GH9Aumk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Love's Lost Time"
+        },
+        {
+          "contentId": "love",
+          "videoId": "x-LKnmqAAe8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Love Supreme"
+        },
+        {
+          "contentId": "love",
+          "videoId": "TketGLbNr_g",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 A Dream Come True"
+        },
+        {
+          "contentId": "love",
+          "videoId": "w1SiMSA4_0o",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Untold Dreams"
+        },
+        {
+          "contentId": "love",
+          "videoId": "WGlY6ilhb38",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Whispers in the Breeze"
+        },
+        {
+          "contentId": "love",
+          "videoId": "xhIzi7fP3ME",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Locked In A Trance"
+        },
+        {
+          "contentId": "love",
+          "videoId": "4b2kuV_Hj0M",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Delight"
+        },
+        {
+          "contentId": "love",
+          "videoId": "6jB1deNv8Kg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 In Perfect Spin"
+        },
+        {
+          "contentId": "love",
+          "videoId": "MXrqcLf_JTc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Spin And Twirl"
+        },
+        {
+          "contentId": "love",
+          "videoId": "Sy5lExtAjFE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Midnight"
+        },
+        {
+          "contentId": "love",
+          "videoId": "GxHoNi0Hht0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 No Turning Back"
+        },
+        {
+          "contentId": "love",
+          "videoId": "9nwCYkCVdfA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Living For The Thrill"
+        },
+        {
+          "contentId": "love",
+          "videoId": "7xqxDUm6414",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Step Into The Scene"
+        },
+        {
+          "contentId": "love",
+          "videoId": "5MKNgm4nGeA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Let the Rhythm Guide Us"
+        },
+        {
+          "contentId": "love",
+          "videoId": "ELLhFhO4S-I",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Making a Splash"
+        },
+        {
+          "contentId": "love",
+          "videoId": "ctuMJ5Qo4Kw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Sound"
+        },
+        {
+          "contentId": "love",
+          "videoId": "oYEj6NGT5Hs",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Horizons"
+        }
+      ]
+    },
+    "edgy": {
+      "worldId": "the_theater",
+      "contentId": "edgy",
+      "title": "Edgy Series",
+      "description": "Edgy music videos",
+      "buttonImage": "edgy.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 7,
+      "sku": "AB-008",
+      "inStock": true,
+      "genre": "Edgy",
+      "type": "gateway",
+      "playlist": [
+        {
+          "contentId": "edgy",
+          "videoId": "6dCqztZqo-Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "mY4FS2xmCHM",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "UUwoNsd_0CI",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Gangsters"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "VH7dHCKbkX4",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 The Royal Canadian Mounted Police"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "BXFju9vpGGo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "DePO9B62PAo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+        }
+      ]
     }
   }
 }
