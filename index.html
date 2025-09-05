@@ -3,136 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whispers Wine Cellar - An Animated Experience</title>
+    <title>Whispers of Aurorachrome</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ======================= Header ======================= -->
-    <header id="main-header">
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#">Whispers Wine Cellar</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#our-wines">Our Wines</a></li>
-                <li><a href="#the-story">The Story</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-<!-- ======================= Hero Section with Video Background ======================= -->
-<section id="hero">
-    <!-- THIS DIV MUST HAVE THE ID 'hero-video-wrapper' -->
-    <div id="hero-video-wrapper" class="hero-video-wrapper"> 
-        <!-- JS will inject the iframe here -->
-    </div>
-    <div class="hero-content">
-        <h1>Whispers: Every Bottle Tells a Story.</h1>
-        <a href="#our-wines" class="btn">Discover Our Collection</a>
-    </div>
-</section>
-
-    <!-- ======================= "Our Wines" Section with Video Placeholders ======================= -->
-<main>
-    <section id="our-wines" class="wine-section dynamic-section">
+    <!-- ======================= Hero Section / World Selector ======================= -->
+    <section id="hero-section">
         <div class="background-video-wrapper">
-            <!-- Wines Background Video will be injected here by JS -->
+            <!-- Hero Background Video will be injected here -->
         </div>
         <div class="section-content">
-            <h2>Our Wines</h2>
-            <div id="wine-buttons-container" class="dynamic-buttons-grid">
-                <!-- Wine buttons will be dynamically inserted here -->
+            <h1>Whispers of Aurorachrome</h1>
+            <p class="subtitle">An Interactive Universe of Music, Wine, and Stories</p>
+            
+            <!-- Main "Worlds" Carousel -->
+            <div id="worlds-carousel" class="carousel-container">
+                <button id="worlds-carousel-prev" class="carousel-nav-btn">&lt;</button>
+                <div id="worlds-buttons" class="dynamic-buttons-grid">
+                    <!-- World buttons will be built here by JS -->
+                </div>
+                <button id="worlds-carousel-next" class="carousel-nav-btn">&gt;</button>
             </div>
         </div>
     </section>
 
- 
- <!-- ... (after your "Our Wines" section) ... -->
-
-<!-- ======================= Gateways Section ======================= -->
-<section id="gateways" class="gateways-section dynamic-section">
-    <div class="background-video-wrapper">
-        <!-- Gateways Background Video will be injected here by JS -->
-    </div>
-    <div class="section-content">
-        <h2>Gateways to Our Stories</h2>
-        <div id="gateway-selection-container">
-              <p>Select a show to begin the experience.</p>
+    <!-- ======================= Theater Section ======================= -->
+    <section id="theater-section" style="display: none;">
+        <div class="background-video-wrapper">
+            <!-- Theater/World-specific Background Video will be injected here -->
+        </div>
+        <div class="section-content">
             
-        <!-- This is the new Carousel structure -->
-        <div class="carousel-container">
-            <button id="carousel-prev" class="carousel-nav-btn">&lt;</button>
-        
-            <div id="gateway-buttons" class="dynamic-buttons-grid">
-            <!-- Buttons will be dynamically inserted here -->
-            </div>
-        
-            <button id="carousel-next" class="carousel-nav-btn">&gt;</button>
-            </div>
-        </div>
-        
-        <div class="gateway-player-wrapper" style="display: none;">
-            <div class="sidebar-video" id="left-sidebar"></div>
-            <div class="main-player-area">
-                <div id="gateway-player"></div>
-                <div id="gateway-controls">
-                    <button id="prev-video">Previous</button>
-                    <button id="next-video">Next</button>
-                    <h3 id="gateway-title">Select a show to begin</h3> 
-                </div>
-            </div>
-            <div class="sidebar-video" id="right-sidebar"></div>
-        </div>
-        <!-- END OF CRITICAL PART -->
-        
-        <div id="site-links-container">
-            <!-- Links will be dynamically inserted here -->
-        </div>
+<!-- Content Carousel (for wines, shows, etc.) -->
+<div id="content-carousel" class="carousel-container">
+    <button id="content-carousel-prev" class="carousel-nav-btn">&lt;</button>
+    <div id="content-buttons" class="dynamic-buttons-grid">
+        <!-- Content buttons (wines/shows) will be built here by JS -->
     </div>
-</section>
- 
- 
- 
- 
- 
- 
- 
- 
- 
- <!-- ======================= "The Story" Section ======================= -->
-        <section id="the-story" class="story-section">
-             <div class="story-content">
-                <div class="story-text">
-                    <h2>Our Philosophy</h2>
-                    <p>At Whispers, we believe that wine is more than just a beverage; it's a narrative captured in a bottle. Our vineyards are tended with a respect for nature's quiet rhythms, allowing each grape to develop its own voice. Each sip is a chapter, a memory, a whisper of the earth itself.</p>
+    <button id="content-carousel-next" class="carousel-nav-btn">&gt;</button>
+</div>
+            
+            <!-- The Main Player Theater -->
+            <div class="gateway-player-wrapper">
+                <div class="sidebar-video" id="left-sidebar"></div>
+                <div class="main-player-area">
+                    <div id="gateway-player"></div>
+                    <div id="gateway-controls">
+                        <button id="prev-video">Previous</button>
+                        <button id="next-video">Next</button>
+                        <h3 id="gateway-title">Select an item to begin</h3> 
+                    </div>
                 </div>
+                <div class="sidebar-video" id="right-sidebar"></div>
             </div>
-        </section>
-    </main>
 
-    <!-- ======================= Footer ======================= -->
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-about">
-                <h4>Whispers Wine Cellar</h4>
-                <p>Crafting stories, one bottle at a time. Experience the whisper of the vineyard in every glass.</p>
-            </div>
-            <div class="footer-signup">
-                <h4>Join Our List</h4>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your Email Address" required>
-                    <button type="submit">Sign Up</button>
-                </form>
+             <!-- Site Links Area -->
+             <div id="site-links-container">
+                <!-- Links will be dynamically inserted here -->
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Whispers Wine Cellar. All Rights Reserved.</p>
-        </div>
-    </footer>
+    </section>
+
+    <!-- YouTube API script must be loaded before our script -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="script.js"></script>
-
 </body>
 </html>
 
