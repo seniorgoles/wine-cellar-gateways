@@ -219,10 +219,12 @@ function loadVideoInPlaylist(index) {
             endSeconds: parseInt(video.endSeconds || 0)
         });
         document.getElementById('gateway-title').innerText = `Now Playing: ${video.title}`;
+        updateUpNextDisplay(); // <-- CALL THE NEW FUNCTION HERE
     } else {
         if(gatewayPlayer.stopVideo) gatewayPlayer.stopVideo();
         const mainTitle = siteData.content[currentContentId].title;
         document.getElementById('gateway-title').innerText = `Playlist finished: ${mainTitle}`;
+        updateUpNextDisplay(); // <-- AND CALL IT HERE TO SHOW THE END MESSAGE
     }
 }
 
@@ -233,6 +235,46 @@ function onGatewayPlayerStateChange(event) {
         loadVideoInPlaylist(nextVideoIndex);
     }
 }
+
+    function updateUpNextDisplay() {
+    const upNextList = document.getElementById('up-next-list');
+    if (!upNextList) return; // Exit if the element doesn't exist
+
+    // Clear the previous list
+    upNextList.innerHTML = '';
+
+    const playlist = siteData.content[currentContentId].playlist;
+    let upNextCount = 0;
+
+    // Loop to find the next 3 videos
+    for (let i = 1; i <= 3; i++) {
+        const nextIndex = currentVideoIndex + i;
+        if (nextIndex < playlist.length) {
+            const nextVideo = playlist[nextIndex];
+            const listItem = document.createElement('li');
+            listItem.textContent = nextVideo.title;
+            upNextList.appendChild(listItem);
+            upNextCount++;
+        }
+    }
+
+    // If we're at the end of the playlist, show a message
+    if (upNextCount === 0) {
+        const endMessage = document.createElement('li');
+        endMessage.textContent = "You've reached the end of the playlist!";
+        endMessage.style.listStyle = 'none'; // No number for this message
+        upNextList.appendChild(endMessage);
+    }
+}
+
+
+
+
+
+
+
+
+
 
 function setupPlayerControls() {
     document.getElementById('next-video').addEventListener('click', () => loadVideoInPlaylist(currentVideoIndex + 1));
