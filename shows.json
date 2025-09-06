@@ -1,7 +1,7 @@
 {
   "siteConfig": {
     "heroBgVideoId": "advBG64C_3Q",
-    "gatewaysBgVideoId": "NPXNAVb-_4Q"
+    "gatewaysBgVideoId": "7FcOeKuumLQ"
   },
   "siteLinks": [
     {
@@ -31,6 +31,12 @@
       "title": "The Arcade",
       "description": "Interactive games and challenges.",
       "buttonImage": "the_arcade.png"
+    },
+    "the_exchange": {
+      "worldId": "the_exchange",
+      "title": "The Exchange",
+      "description": "Merch and more",
+      "buttonImage": "the_exchange.png"
     }
   },
   "content": {
@@ -227,7 +233,7 @@
       "description": "A journey through heartbreak music videos",
       "buttonImage": "lost_love.png",
       "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "rightSidebarVideoId": "4Zk-Vw6_rvQ",
       "isVisible": true,
       "price": 4,
       "sku": "AB-005",
@@ -446,8 +452,8 @@
       "title": "Passionate Series",
       "description": "Passionate melodies music videos",
       "buttonImage": "passionate.png",
-      "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "leftSidebarVideoId": "4Zk-Vw6_rvQ",
+      "rightSidebarVideoId": "ETg9ULatCa0",
       "isVisible": true,
       "price": 5,
       "sku": "AB-006",
@@ -782,7 +788,7 @@
       "description": "Edgy music videos",
       "buttonImage": "edgy.png",
       "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "rightSidebarVideoId": "ETg9ULatCa0",
       "isVisible": true,
       "price": 7,
       "sku": "AB-008",
@@ -831,6 +837,54 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+        }
+      ]
+    },
+    "Jaxx_collection": {
+      "worldId": "the_exchange",
+      "contentId": "Jaxx_collection",
+      "title": "Jaxx T-Shirt",
+      "description": "Jaxx T-Shirt with logo",
+      "buttonImage": "jaxx_collection.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "4Zk-Vw6_rvQ",
+      "isVisible": true,
+      "price": 29.99,
+      "sku": "WC-001",
+      "inStock": true,
+      "genre": "merch",
+      "type": "merch",
+      "playlist": [
+        {
+          "contentId": "Jaxx_collection",
+          "videoId": "8NQjUz8-Rv0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Jaxx T-Shirt with logo"
+        }
+      ]
+    },
+    "merch": {
+      "worldId": "the_exchange",
+      "contentId": "merch",
+      "title": "Merch",
+      "description": "Merch",
+      "buttonImage": "the_exchange.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 29.99,
+      "sku": "WC-001",
+      "inStock": true,
+      "genre": "merch",
+      "type": "merch",
+      "playlist": [
+        {
+          "contentId": "merch",
+          "videoId": "advBG64C_3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers of Aurorachrome Merch"
         }
       ]
     }
