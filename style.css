@@ -9,6 +9,7 @@
     --color-cream: #F5F5DC;
     --color-gold: #D4AF37;
     --color-white: #FFFFFF;
+    --color-blue: #007BFF;
     --font-heading: 'Garamond', 'Times New Roman', serif;
     --font-body: 'Helvetica Neue', 'Arial', sans-serif;
 }
@@ -69,7 +70,75 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
 .section-content {
     position: relative;
     z-index: 2;
-    width: 100%;
+    width: 100%;{
+          "videoId": "oYEj6NGT5Hs",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Horizons"
+        }
+      ]
+    },
+    "edgy": {
+      "worldId": "the_theater",
+      "contentId": "edgy",
+      "title": "Edgy Series",
+      "description": "Edgy music videos",
+      "buttonImage": "edgy.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 7,
+      "sku": "AB-008",
+      "inStock": true,
+      "genre": "Edgy",
+      "type": "gateway",
+      "playlist": [
+        {
+          "contentId": "edgy",
+          "videoId": "6dCqztZqo-Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "mY4FS2xmCHM",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "UUwoNsd_0CI",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Gangsters"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "VH7dHCKbkX4",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 The Royal Canadian Mounted Police"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "BXFju9vpGGo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
+        },
+        {
+          "contentId": "edgy",
+          "videoId": "DePO9B62PAo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+        }
+      ]
+    }
+  }
+}
 }
 
 /* --- 4. Carousel Layout --- */
@@ -148,7 +217,7 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
     font-size: 1.2em;
 }
 
-/* Wine Content Buttons */
+/* Wine Content Buttons - add s at the end of the type name */
 .btn-content[data-content-type="wines"] {
     width: 300px !important;  /* <-- ADD !important */
     height: 200px !important; /* <-- ADD !important */
@@ -160,10 +229,17 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
     width: 300px !important;  /* <-- ADD !important */
     height: 200px !important; /* <-- ADD !important */
     background-color: transparent;
-
 /*    background-color: var(--color-charcoal);
     border: 1px solid var(--color-gold);   */
 }
+
+/* Merch Content Buttons */
+.btn-content[data-content-type="merchs"] {
+    width: 300px !important;  /* <-- ADD !important */
+    height: 200px !important; /* <-- ADD !important */
+    background-color: transparent;
+}
+
 
 /* Active State Glows */
 #content-buttons .btn-content[data-content-type="wines"].active {
@@ -174,6 +250,9 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
     box-shadow: 0 0 30px 8px var(--color-burgundy);
 }
 
+#content-buttons .btn-content[data-content-type="merchs"].active {
+    box-shadow: 0 0 30px 8px var(--color-blue);
+}
 
 
 /* --- 6. Theater Player Layout --- */
