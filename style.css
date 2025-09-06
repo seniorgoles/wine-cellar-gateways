@@ -70,75 +70,7 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
 .section-content {
     position: relative;
     z-index: 2;
-    width: 100%;{
-          "videoId": "oYEj6NGT5Hs",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Whispers Of Aurorachrome \u266a \u2013 Horizons"
-        }
-      ]
-    },
-    "edgy": {
-      "worldId": "the_theater",
-      "contentId": "edgy",
-      "title": "Edgy Series",
-      "description": "Edgy music videos",
-      "buttonImage": "edgy.png",
-      "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
-      "isVisible": true,
-      "price": 7,
-      "sku": "AB-008",
-      "inStock": true,
-      "genre": "Edgy",
-      "type": "gateway",
-      "playlist": [
-        {
-          "contentId": "edgy",
-          "videoId": "6dCqztZqo-Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
-        },
-        {
-          "contentId": "edgy",
-          "videoId": "mY4FS2xmCHM",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
-        },
-        {
-          "contentId": "edgy",
-          "videoId": "UUwoNsd_0CI",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Whispers Of Aurorachrome \u266a \u2013 Gangsters"
-        },
-        {
-          "contentId": "edgy",
-          "videoId": "VH7dHCKbkX4",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Whispers Of Aurorachrome \u266a \u2013 The Royal Canadian Mounted Police"
-        },
-        {
-          "contentId": "edgy",
-          "videoId": "BXFju9vpGGo",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
-        },
-        {
-          "contentId": "edgy",
-          "videoId": "DePO9B62PAo",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
-        }
-      ]
-    }
-  }
-}
+    width: 100%;
 }
 
 /* --- 4. Carousel Layout --- */
@@ -329,3 +261,40 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
     justify-content: center;
     gap: 20px;
 }` 
+
+/* --- "Up Next" Display Styling --- */
+#up-next-container {
+    margin-top: 10px;
+    height: 100px; /* Give it a fixed height to prevent layout jumps */
+    overflow: hidden;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+#up-next-container h4 {
+    margin: 0 0 5px 0;
+    font-size: 0.9em;
+    color: var(--color-cream);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#up-next-list {
+    list-style-position: inside;
+    padding-left: 5px;
+    margin: 0;
+    color: var(--color-cream);
+    opacity: 0.8;
+}
+
+#up-next-list li {
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add '...' if a title is too long */
+    padding-bottom: 2px;
+}
