@@ -843,11 +843,11 @@
     "Jaxx_collection": {
       "worldId": "the_exchange",
       "contentId": "Jaxx_collection",
-      "title": "Jaxx T-Shirt",
-      "description": "Jaxx T-Shirt with logo",
+      "title": "Jaxx Collection",
+      "description": "Jaxx collection of T-Shirts, Thremos and more",
       "buttonImage": "jaxx_collection.png",
       "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "4Zk-Vw6_rvQ",
+      "rightSidebarVideoId": "HohtDXWDx7U",
       "isVisible": true,
       "price": 29.99,
       "sku": "WC-001",
@@ -857,21 +857,21 @@
       "playlist": [
         {
           "contentId": "Jaxx_collection",
-          "videoId": "8NQjUz8-Rv0",
+          "videoId": "q3msEpO2Rxs",
           "startSeconds": 0,
           "endSeconds": 0,
-          "title": "Jaxx T-Shirt with logo"
+          "title": "Jaxx collection of T-Shirts, thermos, and more"
         }
       ]
     },
-    "merch": {
+    "Echo_collection": {
       "worldId": "the_exchange",
-      "contentId": "merch",
-      "title": "Merch",
-      "description": "Merch",
-      "buttonImage": "the_exchange.png",
-      "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "contentId": "Echo_collection",
+      "title": "Echo Collection",
+      "description": "Echo collection of T-Shirts, Thremos and more",
+      "buttonImage": "Echo Collection.png",
+      "leftSidebarVideoId": "DQ7BnBSbVgw",
+      "rightSidebarVideoId": "DQ7BnBSbVgw",
       "isVisible": true,
       "price": 29.99,
       "sku": "WC-001",
@@ -880,11 +880,35 @@
       "type": "merch",
       "playlist": [
         {
-          "contentId": "merch",
-          "videoId": "advBG64C_3Q",
+          "contentId": "Echo_collection",
+          "videoId": "phLTGGWvJuE",
           "startSeconds": 0,
           "endSeconds": 0,
-          "title": "Whispers of Aurorachrome Merch"
+          "title": "Echo collection of T-Shirts, thermos, and more"
+        }
+      ]
+    },
+    "Dax_collection": {
+      "worldId": "the_exchange",
+      "contentId": "Dax_collection",
+      "title": "Dax Collection",
+      "description": "Dax collection of T-Shirts, Thremos and more",
+      "buttonImage": "Dax Collection.png",
+      "leftSidebarVideoId": "HohtDXWDx7U",
+      "rightSidebarVideoId": "DQ7BnBSbVgw",
+      "isVisible": true,
+      "price": 30.99,
+      "sku": "WC-002",
+      "inStock": true,
+      "genre": "merch",
+      "type": "merch",
+      "playlist": [
+        {
+          "contentId": "Dax_collection",
+          "videoId": "ulEt-kXr-uU",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Dax collection of T-Shirts, thermos, and more"
         }
       ]
     }
