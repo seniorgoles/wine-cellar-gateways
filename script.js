@@ -1,5 +1,5 @@
 // ====================================================================
-// ===   Whispers of Aurorachrome - Main Script v3.1 (Final Clean)  ===
+// === Whispers of Aurorachrome - Main Script v4.1 (SENSEI VERIFIED) ===
 // ====================================================================
 
 // --- Global State ---
@@ -7,12 +7,11 @@ let siteData = {};
 let gatewayPlayer;
 let currentContentId = '';
 let currentVideoIndex = 0;
-let currentWorldId = ''; // This will store the currently active world
-
-// Carousel State
+let currentWorldId = '';
 const ITEMS_PER_PAGE = 5;
 let worldsCurrentPage = 0;
 let contentCurrentPage = 0;
+let currentGameScript = null;
 
 // --- Main Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -31,27 +30,45 @@ function initializePage() {
     buildWorldsCarousel();
     buildSiteLinks();
     setupCarouselControls();
-}
+    document.getElementById('back-to-arcade-selection-btn').addEventListener('click', () => {
+        window.location.hash = '#arcade';
+        window.location.reload();
+    });
+    // --- ADD THIS NEW EVENT LISTENER ---
+    // Listener for the back button on the ARCADE MENU
+    document.getElementById('back-to-worlds-from-arcade-btn').addEventListener('click', () => {
+        document.getElementById('arcade-section').style.display = 'none';
+        document.getElementById('hero-section').style.display = 'flex';
+    });
 
-function setupBackgrounds() {
-    const heroWrapper = document.querySelector('#hero-section .background-video-wrapper');
-    if (heroWrapper && siteData.siteConfig?.heroBgVideoId) {
-        heroWrapper.appendChild(createBgVideo(siteData.siteConfig.heroBgVideoId));
+
+    const hash = window.location.hash;
+    if (hash.startsWith('#game=')) {
+        const gameIdToLoad = hash.substring(6);
+        setTimeout(() => {
+            selectWorld('the_arcade');
+            const gameButton = document.querySelector(`#arcade-buttons .btn[data-content-key='${gameIdToLoad}']`);
+            if (gameButton) gameButton.click();
+        }, 100);
+    } else if (hash === '#arcade') {
+        setTimeout(() => {
+            selectWorld('the_arcade');
+        }, 100);
+    }
+    if (hash) {
+        history.pushState("", document.title, window.location.pathname + window.location.search);
     }
 }
 
 // --- Carousel and Button Building ---
-
 function buildWorldsCarousel() {
     const container = document.getElementById('worlds-buttons');
     const allWorlds = siteData.worlds ? Object.values(siteData.worlds) : [];
     if (!container || allWorlds.length === 0) return;
-
     const totalPages = Math.ceil(allWorlds.length / ITEMS_PER_PAGE);
     container.innerHTML = '';
     const startIndex = worldsCurrentPage * ITEMS_PER_PAGE;
     const pageWorlds = allWorlds.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-
     pageWorlds.forEach(world => {
         const button = createDynamicButton(world, 'world');
         button.addEventListener('click', () => selectWorld(world.worldId));
@@ -61,97 +78,90 @@ function buildWorldsCarousel() {
 }
 
 function buildContentCarousel() {
-    const container = document.getElementById('content-buttons');
-    // Let's see what we're working with
-    console.log("Current World ID to filter by:", currentWorldId);
-    console.log("All content items:", Object.values(siteData.content || {}));
-
-
-
-
-    const allContent = siteData.content ? Object.values(siteData.content).filter(item => item.worldId === currentWorldId) : [];
+    const containerId = (currentWorldId === 'the_arcade') ? '#arcade-buttons' : '#content-buttons';
+    const container = document.querySelector(containerId);
+    let allContent = siteData.content ? Object.values(siteData.content).filter(item => item.worldId === currentWorldId) : [];
     if (!container) return;
-    
-    console.log(`Building content for world '${currentWorldId}'. Found ${allContent.length} items.`);
 
+    console.log(`Building content for world '${currentWorldId}'. Found ${allContent.length} items.`);
     const totalPages = Math.ceil(allContent.length / ITEMS_PER_PAGE);
     container.innerHTML = '';
     const startIndex = contentCurrentPage * ITEMS_PER_PAGE;
     const pageContent = allContent.slice(startIndex, startIndex + ITEMS_PER_PAGE);
-
     pageContent.forEach(item => {
         const button = createDynamicButton(item, 'content');
-        button.addEventListener('click', () => loadContent(item.contentId));
+        if (item.worldId === 'the_arcade') {
+            button.addEventListener('click', () => loadGame(item.contentId));
+        } else {
+            button.addEventListener('click', () => loadContent(item.contentId));
+        }
         container.appendChild(button);
     });
-    updateCarouselNav('content', totalPages, contentCurrentPage);
+    const navType = (currentWorldId === 'the_arcade') ? 'arcade' : 'content';
+    updateCarouselNav(navType, totalPages, contentCurrentPage);
 }
 
 function createDynamicButton(item, type) {
     const button = document.createElement('button');
-    
-    // Set the base classes
-    button.className = `btn btn-${type}`; // e.g., btn-world or btn-content
-    
-    // --- THIS IS THE CRITICAL FIX ---
-    // Add the data attribute that our CSS is looking for
+    button.className = `btn btn-${type}`;
     if (type === 'content') {
-        button.setAttribute('data-content-type', item.type + 's'); // e.g., 'wine' -> 'wines'
+        button.setAttribute('data-content-type', item.type + 's');
     }
-    // --- END OF CRITICAL FIX ---
-
     button.title = item.description || '';
     button.textContent = item.title;
-
     if (item.buttonImage) {
         button.style.backgroundImage = `url('images/${item.buttonImage}')`;
         button.setAttribute('aria-label', item.title);
         button.style.color = 'transparent';
     }
-
     return button;
 }
 
 // --- Navigation and State Changes ---
-
 function selectWorld(worldId) {
-    currentWorldId = worldId; // Set the global state for the current world
-    contentCurrentPage = 0;   // Reset content page to the beginning
+    currentWorldId = worldId;
+    contentCurrentPage = 0;
     console.log(`World selected: ${currentWorldId}`);
-    
-    const theaterSection = document.getElementById('theater-section');
-    theaterSection.style.display = 'block';
-    theaterSection.scrollIntoView({ behavior: 'smooth' });
-
-    buildContentCarousel(); // Build the content for the newly selected world
-
-    const theaterBgWrapper = document.querySelector('#theater-section .background-video-wrapper');
-    if (theaterBgWrapper) {
-        theaterBgWrapper.innerHTML = '';
-        const bgVideoId = siteData.siteConfig?.gatewaysBgVideoId; // Default for now
-        if (bgVideoId) {
-            theaterBgWrapper.appendChild(createBgVideo(bgVideoId));
+    if (worldId === 'the_arcade') {
+        document.getElementById('hero-section').style.display = 'none';
+        document.getElementById('theater-section').style.display = 'none';
+        document.getElementById('arcade-section').style.display = 'flex';
+        document.getElementById('game-selection-container').style.display = 'block';
+        document.getElementById('game-container-wrapper').style.display = 'none';
+        buildContentCarousel();
+        const arcadeBgWrapper = document.querySelector('#arcade-section .background-video-wrapper');
+        if (arcadeBgWrapper) {
+            arcadeBgWrapper.innerHTML = '';
+            const bgVideoId = siteData.siteConfig?.heroBgVideoId;
+            if (bgVideoId) arcadeBgWrapper.appendChild(createBgVideo(bgVideoId));
+        }
+    } else {
+        document.getElementById('hero-section').style.display = 'flex';
+        document.getElementById('arcade-section').style.display = 'none';
+        const theaterSection = document.getElementById('theater-section');
+        theaterSection.style.display = 'block';
+        buildContentCarousel();
+        theaterSection.scrollIntoView({ behavior: 'smooth' });
+        const theaterBgWrapper = document.querySelector('#theater-section .background-video-wrapper');
+        if (theaterBgWrapper) {
+            theaterBgWrapper.innerHTML = '';
+            const bgVideoId = siteData.siteConfig?.gatewaysBgVideoId;
+            if (bgVideoId) theaterBgWrapper.appendChild(createBgVideo(bgVideoId));
         }
     }
 }
 
+// --- Theater Player Logic ---
 function loadContent(contentId) {
     const contentData = siteData.content[contentId];
     if (!contentData) return;
-
     currentContentId = contentId;
     currentVideoIndex = 0;
-
-    if (contentData.playlist) {
-        shuffleArray(contentData.playlist);
-    }
-    
+    if (contentData.playlist) shuffleArray(contentData.playlist);
     createSidebarVideo(contentData.leftSidebarVideoId, document.getElementById('left-sidebar'));
     createSidebarVideo(contentData.rightSidebarVideoId, document.getElementById('right-sidebar'));
-    
     document.querySelectorAll('#content-buttons .btn').forEach(b => b.classList.remove('active'));
     document.querySelector(`#content-buttons .btn[aria-label='${contentData.title}']`)?.classList.add('active');
-
     if (gatewayPlayer) {
         loadVideoInPlaylist(0);
     } else {
@@ -161,7 +171,121 @@ function loadContent(contentId) {
     }
 }
 
-// --- Carousel Control Logic ---
+function onGatewayPlayerReady(event) {
+    setupPlayerControls();
+    loadVideoInPlaylist(currentVideoIndex);
+    event.target.addEventListener('onStateChange', onGatewayPlayerStateChange);
+}
+
+function loadVideoInPlaylist(index) {
+    if (!gatewayPlayer || typeof gatewayPlayer.loadVideoById !== 'function') return;
+    const playlist = siteData.content[currentContentId].playlist;
+    if (index >= 0 && index < playlist.length) {
+        currentVideoIndex = index;
+        const video = playlist[index];
+        gatewayPlayer.loadVideoById({
+            videoId: video.videoId,
+            startSeconds: parseInt(video.startSeconds || 0),
+            endSeconds: parseInt(video.endSeconds || 0)
+        });
+        document.getElementById('gateway-title').innerText = `Now Playing: ${video.title}`;
+        updateUpNextDisplay();
+    } else {
+        if(gatewayPlayer.stopVideo) gatewayPlayer.stopVideo();
+        const mainTitle = siteData.content[currentContentId].title;
+        document.getElementById('gateway-title').innerText = `Playlist finished: ${mainTitle}`;
+        updateUpNextDisplay();
+    }
+}
+
+function onGatewayPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED) {
+        const playlist = siteData.content[currentContentId].playlist;
+        const nextVideoIndex = (currentVideoIndex + 1) % playlist.length;
+        loadVideoInPlaylist(nextVideoIndex);
+    }
+}
+
+// --- Arcade Game Engine ---
+function loadGame(contentId) {
+    if (currentGameScript) {
+        window.location.hash = `game=${contentId}`;
+        window.location.reload();
+        return;
+    }
+    document.getElementById('game-selection-container').style.display = 'none';
+    const gameWrapper = document.getElementById('game-container-wrapper');
+    gameWrapper.style.display = 'block';
+    const gameContainer = document.getElementById('game-container');
+    gameContainer.innerHTML = '';
+    const gameData = siteData.content[contentId];
+    if (!gameData || !gameData.scriptFile) {
+        gameContainer.innerHTML = '<h2>Error: Game data not found.</h2>';
+        return;
+    }
+    const gameType = gameData.scriptFile.replace('.js', '');
+    gameWrapper.setAttribute('data-active-game', gameType);
+    gameContainer.setAttribute('data-game-type', gameType);
+    document.getElementById('game-title').textContent = gameData.title;
+    document.getElementById('game-instructions').textContent = gameData.game_play || ''; // Use the data or be blank if it's missing
+
+    currentContentId = contentId;
+    const scriptPath = `games/${gameData.scriptFile}`;
+    currentGameScript = document.createElement('script');
+    currentGameScript.src = scriptPath;
+    currentGameScript.onload = () => {
+        console.log(`Cartridge "${gameData.scriptFile}" loaded.`);
+        if (typeof startGame === 'function') {
+            startGame(gameData.playlist);
+        } else {
+            gameContainer.innerHTML = `<h2>Error: startGame not found in ${gameData.scriptFile}.</h2>`;
+        }
+    };
+    currentGameScript.onerror = () => {
+        gameContainer.innerHTML = '<h2>Error: Could not load game file.</h2>';
+    };
+    document.body.appendChild(currentGameScript);
+}
+
+// ===================================================================
+// ===        UNIVERSAL HELPER FUNCTIONS (SENSEI VERIFIED)         ===
+// ===================================================================
+
+function setupBackgrounds() {
+    const heroWrapper = document.querySelector('#hero-section .background-video-wrapper');
+    if (heroWrapper && siteData.siteConfig?.heroBgVideoId) {
+        heroWrapper.appendChild(createBgVideo(siteData.siteConfig.heroBgVideoId));
+    }
+}
+
+function setupPlayerControls() {
+    document.getElementById('next-video').addEventListener('click', () => loadVideoInPlaylist(currentVideoIndex + 1));
+    document.getElementById('prev-video').addEventListener('click', () => loadVideoInPlaylist(currentVideoIndex - 1));
+}
+
+function updateUpNextDisplay() {
+    const upNextList = document.getElementById('up-next-list');
+    if (!upNextList) return;
+    upNextList.innerHTML = '';
+    const playlist = siteData.content[currentContentId].playlist;
+    let upNextCount = 0;
+    for (let i = 1; i <= 3; i++) {
+        const nextIndex = currentVideoIndex + i;
+        if (nextIndex < playlist.length) {
+            const nextVideo = playlist[nextIndex];
+            const listItem = document.createElement('li');
+            listItem.textContent = nextVideo.title;
+            upNextList.appendChild(listItem);
+            upNextCount++;
+        }
+    }
+    if (upNextCount === 0) {
+        const endMessage = document.createElement('li');
+        endMessage.textContent = "You've reached the end of the playlist!";
+        endMessage.style.listStyle = 'none';
+        upNextList.appendChild(endMessage);
+    }
+}
 
 function setupCarouselControls() {
     document.getElementById('worlds-carousel-prev').addEventListener('click', () => {
@@ -177,6 +301,14 @@ function setupCarouselControls() {
     });
     document.getElementById('content-carousel-next').addEventListener('click', () => {
         const allContent = siteData.content ? Object.values(siteData.content).filter(item => item.worldId === currentWorldId).length : 0;
+        const totalPages = Math.ceil(allContent / ITEMS_PER_PAGE);
+        if (contentCurrentPage < totalPages - 1) { contentCurrentPage++; buildContentCarousel(); }
+    });
+    document.getElementById('arcade-carousel-prev').addEventListener('click', () => {
+        if (contentCurrentPage > 0) { contentCurrentPage--; buildContentCarousel(); }
+    });
+    document.getElementById('arcade-carousel-next').addEventListener('click', () => {
+        const allContent = siteData.content ? Object.values(siteData.content).filter(item => item.worldId === 'the_arcade').length : 0;
         const totalPages = Math.ceil(allContent / ITEMS_PER_PAGE);
         if (contentCurrentPage < totalPages - 1) { contentCurrentPage++; buildContentCarousel(); }
     });
@@ -197,91 +329,6 @@ function updateCarouselNav(type, totalPages, currentPage) {
     }
 }
 
-// --- Player Logic ---
-function onYouTubeIframeAPIReady() {}
-
-function onGatewayPlayerReady(event) {
-    setupPlayerControls();
-    loadVideoInPlaylist(currentVideoIndex);
-    event.target.addEventListener('onStateChange', onGatewayPlayerStateChange);
-}
-
-function loadVideoInPlaylist(index) {
-    if (!gatewayPlayer || typeof gatewayPlayer.loadVideoById !== 'function') return;
-
-    const playlist = siteData.content[currentContentId].playlist;
-    if (index >= 0 && index < playlist.length) {
-        currentVideoIndex = index;
-        const video = playlist[index];
-        gatewayPlayer.loadVideoById({
-            videoId: video.videoId,
-            startSeconds: parseInt(video.startSeconds || 0),
-            endSeconds: parseInt(video.endSeconds || 0)
-        });
-        document.getElementById('gateway-title').innerText = `Now Playing: ${video.title}`;
-        updateUpNextDisplay(); // <-- CALL THE NEW FUNCTION HERE
-    } else {
-        if(gatewayPlayer.stopVideo) gatewayPlayer.stopVideo();
-        const mainTitle = siteData.content[currentContentId].title;
-        document.getElementById('gateway-title').innerText = `Playlist finished: ${mainTitle}`;
-        updateUpNextDisplay(); // <-- AND CALL IT HERE TO SHOW THE END MESSAGE
-    }
-}
-
-function onGatewayPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED) {
-        const playlist = siteData.content[currentContentId].playlist;
-        const nextVideoIndex = (currentVideoIndex + 1) % playlist.length;
-        loadVideoInPlaylist(nextVideoIndex);
-    }
-}
-
-    function updateUpNextDisplay() {
-    const upNextList = document.getElementById('up-next-list');
-    if (!upNextList) return; // Exit if the element doesn't exist
-
-    // Clear the previous list
-    upNextList.innerHTML = '';
-
-    const playlist = siteData.content[currentContentId].playlist;
-    let upNextCount = 0;
-
-    // Loop to find the next 3 videos
-    for (let i = 1; i <= 3; i++) {
-        const nextIndex = currentVideoIndex + i;
-        if (nextIndex < playlist.length) {
-            const nextVideo = playlist[nextIndex];
-            const listItem = document.createElement('li');
-            listItem.textContent = nextVideo.title;
-            upNextList.appendChild(listItem);
-            upNextCount++;
-        }
-    }
-
-    // If we're at the end of the playlist, show a message
-    if (upNextCount === 0) {
-        const endMessage = document.createElement('li');
-        endMessage.textContent = "You've reached the end of the playlist!";
-        endMessage.style.listStyle = 'none'; // No number for this message
-        upNextList.appendChild(endMessage);
-    }
-}
-
-
-
-
-
-
-
-
-
-
-function setupPlayerControls() {
-    document.getElementById('next-video').addEventListener('click', () => loadVideoInPlaylist(currentVideoIndex + 1));
-    document.getElementById('prev-video').addEventListener('click', () => loadVideoInPlaylist(currentVideoIndex - 1));
-}
-
-// --- Universal Helper Functions (must be present) ---
 function createBgVideo(videoId) {
     const iframe = document.createElement('iframe');
     iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1`;
@@ -305,9 +352,6 @@ function shuffleArray(array) {
   }
 }
 
-
-
-
 function buildSiteLinks() {
     const container = document.getElementById('site-links-container');
     if (!container || !siteData.siteLinks) return;
@@ -315,10 +359,12 @@ function buildSiteLinks() {
     siteData.siteLinks.forEach(link => {
         if (link.linkText && link.linkUrl) {
             const a = document.createElement('a');
-a.href = link.linkUrl;
-a.textContent = link.linkText;
-a.target = '_blank';
-container.appendChild(a);
+            a.href = link.linkUrl;
+            a.textContent = link.linkText;
+            a.target = '_blank';
+            container.appendChild(a);
+        }
+    });
 }
-});
-}
+
+function onYouTubeIframeAPIReady() {}
