@@ -72,9 +72,47 @@
             </div>
         </div>
     </section>
+<!-- ======================= Arcade Section (for Games) ======================= -->
+<section id="arcade-section" style="display: none;">
+      <!-- === ADD THIS MISSING CONTAINER === -->
+    <div class="background-video-wrapper">
+        <!-- The Arcade Background Video will be injected here -->
+    </div>
+    <!-- === END OF MISSING CONTAINER === -->
+    
+    <!-- NEW: A container for the game selection carousel -->
+    <div class="section-content">
+    <div id="game-selection-container">
+         <h2>The Arcade</h2> 
+        <div id="arcade-carousel" class="carousel-container">
+            <button id="arcade-carousel-prev" class="carousel-nav-btn">&lt;</button>
+            <div id="arcade-buttons" class="dynamic-buttons-grid">
+                <!-- Game selection buttons will be built here -->
+            </div>
+            <button id="arcade-carousel-next" class="carousel-nav-btn">&gt;</button>
+               
+        </div>
+    <button id="back-to-worlds-from-arcade-btn" class="btn">Back to Worlds</button> 
+    </div>
 
-    <!-- YouTube API script must be loaded before our script -->
+    <!-- The main container for the game itself (will be populated by JS) -->
+    <div id="game-container-wrapper" style="display: none;">
+        <h2 id="game-title"></h2>
+        <p id="game-instructions"></p> 
+        <div id="game-container"></div>
+        <button id="back-to-arcade-selection-btn" class="btn">Back to Game Selection</button>
+    </div>
+
+</section>
+
+
+
+
+    <!-- The ONE and ONLY YouTube API script -->
     <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <!-- Your main script -->
     <script src="script.js"></script>
 </body>
 </html>
