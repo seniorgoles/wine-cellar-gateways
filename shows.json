@@ -37,6 +37,30 @@
       "title": "The Exchange",
       "description": "Merch and more",
       "buttonImage": "the_exchange.png"
+    },
+    "new1": {
+      "worldId": "new1",
+      "title": "",
+      "description": "",
+      "buttonImage": ""
+    },
+    "new2": {
+      "worldId": "new2",
+      "title": "",
+      "description": "",
+      "buttonImage": ""
+    },
+    "new3": {
+      "worldId": "new3",
+      "title": "",
+      "description": "",
+      "buttonImage": ""
+    },
+    "new4": {
+      "worldId": "new4",
+      "title": "",
+      "description": "",
+      "buttonImage": ""
     }
   },
   "content": {
@@ -188,7 +212,21 @@
         },
         {
           "contentId": "solarice",
-          "videoId": "advBG64C_3Q",
+          "videoId": "ETg9ULatCa0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Solaris"
+        },
+        {
+          "contentId": "solarice",
+          "videoId": "DQ7BnBSbVgw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Solaris Ice Wine"
+        },
+        {
+          "contentId": "solarice",
+          "videoId": "HohtDXWDx7U",
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "Perfect Pairings for Solaris"
@@ -837,6 +875,887 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+        }
+      ]
+    },
+    "jigsaw_demo": {
+      "worldId": "the_arcade",
+      "contentId": "jigsaw_demo",
+      "title": "Signal Scramble \u2013 Video Jigsaw Puzzle",
+      "scriptFile": "jigsaw.js",
+      "description": "Scrambled Music Video Jigsaw puzzle game",
+      "game_play": "Drag the scrambled video pieces to the correct spots to solve the puzzle.",
+      "buttonImage": "signal scramble main.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "HohtDXWDx7U",
+      "isVisible": true,
+      "price": 29.99,
+      "sku": "WC-001",
+      "inStock": true,
+      "genre": "jigsaw",
+      "type": "jigsaw",
+      "playlist": [
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "7XtqLpgx_28",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Jaxx collection of T-Shirts, thermos, and more"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "8hYMOcBDV3Y",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Circles of Joy"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "IF673dbWOT8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Set The World On Fire"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "L8X_1Udcf0k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Art Deranged"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "OGXfI25JBLA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Hearts"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "IKb7GHgJuoE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Veil of Shadows"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "qoQz8biGCbQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Let\u2019s Conquer This Space"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "YBqiUyAdLsY",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Supercar Dreams"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "dtg9h-o6DzA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We\u2019re On A Roll"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "OpUrpKS6t6g",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Anticipation"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "lsK-HesGlTg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Girls Make Me Sad"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "55opJ56brno",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Rhythm of Dance"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "oqMwEbnixyg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Pulse "
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "sLi_sqz3eMo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Rush"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "vcj_kB_8xqg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "zUEPn6oRsVo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Dissolve"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "MQyY8ccX53M",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Release"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "Vg8iB8o7Y2k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Waves of Despair"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "yRE_Hj4iscQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Mystery"
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "pkOXAj6kbis",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Ascension "
+        },
+        {
+          "contentId": "jigsaw_demo",
+          "videoId": "wT6rR8ylvQg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Dance All Night 2025 Symphonic Dance Party"
+        }
+      ]
+    },
+    "thumbnail_jigsaw": {
+      "worldId": "the_arcade",
+      "contentId": "thumbnail_jigsaw",
+      "title": "Static Shift \u2013 Thumbnail Jigsaw",
+      "scriptFile": "thumbnail-jigsaw.js",
+      "description": "Music Video Thumbnail Jigsaw puzzle game",
+      "game_play": "Drag the pieces to their correct spots. Double-click a piece to rotate it.",
+      "buttonImage": "static shift main.png",
+      "leftSidebarVideoId": "ETg9ULatCa1",
+      "rightSidebarVideoId": "HohtDXWDx7U",
+      "isVisible": true,
+      "price": 30.99,
+      "sku": "WC-002",
+      "inStock": true,
+      "genre": "jigsaw",
+      "type": "jigsaw",
+      "playlist": [
+        {
+          "contentId": "thumbnail_jigsaw",
+          "videoId": "kUB1FlKAh00",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost"
+        },
+        {
+          "contentId": "thumbnail_jigsaw",
+          "videoId": "OYk5DuLyvq0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Holding On to Memories"
+        },
+        {
+          "contentId": "thumbnail_jigsaw",
+          "videoId": "7XtqLpgx_28",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Unseen Storms"
+        },
+        {
+          "contentId": "thumbnail_jigsaw",
+          "videoId": "LCOLIfAlnkE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We're All We Need"
+        },
+        {
+          "contentId": "thumbnail_jigsaw",
+          "videoId": "nsg39MTlZVw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Falling for Love Again"
+        }
+      ]
+    },
+    "memory_match": {
+      "worldId": "the_arcade",
+      "contentId": "memory_match",
+      "title": "Echo Chamber \u2013 Thumbnail Match-Up Game",
+      "scriptFile": "memory-match.js",
+      "description": "Match Music Video Thumbnails to Video game",
+      "game_play": "Click a thumbnail, then click a video. Find all the matching pairs.",
+      "buttonImage": "echo chamber main.png",
+      "leftSidebarVideoId": "ETg9ULatCa1",
+      "rightSidebarVideoId": "HohtDXWDx7U",
+      "isVisible": true,
+      "price": 31.99,
+      "sku": "WC-003",
+      "inStock": "",
+      "genre": "jigsaw",
+      "type": "jigsaw",
+      "playlist": [
+        {
+          "contentId": "memory_match",
+          "videoId": "sLpl2G-BJ4k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Nightmares"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "ZkGXXcPQV_0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 In the Rush of the Night"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "iCcQTZqQk6Y",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Wish You Were Near"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "k3vOaKQaZPw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows of What We Had"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "yIufrZijvAs",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Torn Heart"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "NmtN9kQhwb0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Twilight Haze "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "ugaoMIY6n9o",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Find Our Place"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "HcyGKX6PM1c",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 No Solace to Find (refresh)"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "ZkGXXcPQV_0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 In the Rush of the Night"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "iCcQTZqQk6Y",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Wish You Were Near"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "k3vOaKQaZPw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows of What We Had"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "yIufrZijvAs",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Torn Heart"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "NmtN9kQhwb0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Twilight Haze "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "ugaoMIY6n9o",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Find Our Place"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "HcyGKX6PM1c",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 No Solace to Find (refresh)"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "jxVpiWFZ9Hc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Gathered Secrets "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "R83neX4g2Vc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 In the Spotlight "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "rkbZkBAR7F4",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadow Memories"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "CCw6-l7hKt0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Love\u2019s Smoky Haze"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "a6W5pZ6mEWc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost Lover (refresh)"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "N0Zny6wFiuk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Tangled Mess"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "1YdzryiqTIg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Reflections Refresh version"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "ktjZn9pPp_8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Can\u2019t Let This Love Go (refresh)"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "nL8W7SXRzO0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Until the Morning refresh version"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "z85cmPFEQc4",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Lost Dreams"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "J69muoAuR3Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013You Were My Light "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "DgNlFhQtrCk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Gone Too Soon"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "pUQH_FkqmFk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Searching for the Reasons"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "dZ2hAffRZVM",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Transform"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "8hYMOcBDV3Y",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Circles of Joy"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "IF673dbWOT8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Set The World On Fire"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "L8X_1Udcf0k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Art Deranged"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "OGXfI25JBLA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Hearts"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "IKb7GHgJuoE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Veil of Shadows"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "qoQz8biGCbQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Let\u2019s Conquer This Space"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "YBqiUyAdLsY",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Supercar Dreams"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "dtg9h-o6DzA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We\u2019re On A Roll"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "OpUrpKS6t6g",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Anticipation"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "lsK-HesGlTg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Girls Make Me Sad"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "55opJ56brno",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Rhythm of Dance"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "oqMwEbnixyg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Pulse "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "sLi_sqz3eMo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Rush"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "vcj_kB_8xqg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "zUEPn6oRsVo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Dissolve"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "MQyY8ccX53M",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Release"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "Vg8iB8o7Y2k",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Waves of Despair"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "yRE_Hj4iscQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Mystery"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "pkOXAj6kbis",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Ascension "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "wT6rR8ylvQg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Dance All Night 2025 Symphonic Dance Party"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "198xlNXW_fE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Vibrant Code "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "KBiZIcTY5bQ",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Visions"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "WQZU3Ie2Wls",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric World"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "A2CryogHF3I",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Sparkling Glitter"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "pTHk325efA8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Under the Starry Night"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "PgIzxPN8XIk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Light Up The Night "
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "HmE7GH9Aumk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Love's Lost Time"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "x-LKnmqAAe8",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Love Supreme"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "TketGLbNr_g",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 A Dream Come True"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "w1SiMSA4_0o",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Untold Dreams"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "WGlY6ilhb38",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Whispers in the Breeze"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "xhIzi7fP3ME",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Locked In A Trance"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "4b2kuV_Hj0M",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Electric Delight"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "6jB1deNv8Kg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 In Perfect Spin"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "MXrqcLf_JTc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Spin And Twirl"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "Sy5lExtAjFE",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Midnight"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "GxHoNi0Hht0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 No Turning Back"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "9nwCYkCVdfA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Living For The Thrill"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "7xqxDUm6414",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Step Into The Scene"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "5MKNgm4nGeA",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Let the Rhythm Guide Us"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "ELLhFhO4S-I",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Making a Splash"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "ctuMJ5Qo4Kw",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Sound"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "oYEj6NGT5Hs",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Horizons"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "6dCqztZqo-Q",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "mY4FS2xmCHM",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "UUwoNsd_0CI",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Gangsters"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "VH7dHCKbkX4",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 The Royal Canadian Mounted Police"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "BXFju9vpGGo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Detective Heat"
+        },
+        {
+          "contentId": "memory_match",
+          "videoId": "DePO9B62PAo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 New Sheriff in Town"
+        }
+      ]
+    },
+    "sequence_puzzle": {
+      "worldId": "the_arcade",
+      "contentId": "sequence_puzzle",
+      "title": "The Director\u2019s Cut - Video Sequence Game",
+      "scriptFile": "sequence-puzzle.js",
+      "description": "Arrange Music Video Scenes in Sequence game",
+      "game_play": "Drag the video clips into the correct story order on the board below.",
+      "buttonImage": "director cut main.png",
+      "leftSidebarVideoId": "",
+      "rightSidebarVideoId": "",
+      "isVisible": true,
+      "price": "",
+      "sku": "",
+      "inStock": "",
+      "genre": "",
+      "type": "",
+      "playlist": [
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "kUB1FlKAh00",
+          "startSeconds": 5,
+          "endSeconds": 80,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "5MKNgm4nGeA",
+          "startSeconds": 10,
+          "endSeconds": 85,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Let the Rhythm Guide Us"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "ELLhFhO4S-I",
+          "startSeconds": 15,
+          "endSeconds": 90,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Making a Splash"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "ctuMJ5Qo4Kw",
+          "startSeconds": 20,
+          "endSeconds": 95,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Sound"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "oYEj6NGT5Hs",
+          "startSeconds": 25,
+          "endSeconds": 100,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Horizons"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "6dCqztZqo-Q",
+          "startSeconds": 30,
+          "endSeconds": 105,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "mY4FS2xmCHM",
+          "startSeconds": 35,
+          "endSeconds": 110,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "Sy5lExtAjFE",
+          "startSeconds": 40,
+          "endSeconds": 115,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Midnight"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "GxHoNi0Hht0",
+          "startSeconds": 45,
+          "endSeconds": 120,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 No Turning Back"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "9nwCYkCVdfA",
+          "startSeconds": 50,
+          "endSeconds": 125,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Living For The Thrill"
+        },
+        {
+          "contentId": "sequence_puzzle",
+          "videoId": "7xqxDUm6414",
+          "startSeconds": 55,
+          "endSeconds": 130,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 We Step Into The Scene"
         }
       ]
     },
