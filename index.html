@@ -83,7 +83,8 @@
     <!-- NEW: A container for the game selection carousel -->
     <div class="section-content">
     <div id="game-selection-container">
-         <h2>The Arcade</h2> 
+         <h2>The Arcade</h2>
+ 
         <div id="arcade-carousel" class="carousel-container">
             <button id="arcade-carousel-prev" class="carousel-nav-btn">&lt;</button>
             <div id="arcade-buttons" class="dynamic-buttons-grid">
@@ -92,6 +93,8 @@
             <button id="arcade-carousel-next" class="carousel-nav-btn">&gt;</button>
                
         </div>
+    <button id="jukebox-open-btn" class="btn">Choose Background Music</button>
+ 
     <button id="back-to-worlds-from-arcade-btn" class="btn">Back to Worlds</button> 
     </div>
 
@@ -104,6 +107,35 @@
     </div>
 
 </section>
+   <!-- === ADD THIS NEW OVERLAY STRUCTURE === -->
+   <div id="jukebox-overlay" style="display: none;">
+       <div id="jukebox-modal">
+           <h3>Choose a Music Playlist</h3>
+           <div id="jukebox-carousel" class="carousel-container">
+               <button id="jukebox-carousel-prev" class="carousel-nav-btn">&lt;</button>
+               <div id="jukebox-buttons" class="dynamic-buttons-grid">
+                   <!-- Jukebox playlist buttons will be built here -->
+               </div>
+               <button id="jukebox-carousel-next" class="carousel-nav-btn">&gt;</button>
+           </div>
+           <button id="jukebox-close-btn" class="btn">Close</button>
+       </div>
+   </div>
+   <!-- === END OF OVERLAY === -->
+
+   <!-- === ADD THE UNIVERSAL MUTE BUTTON === -->
+   <div id="universal-mute-btn" class="muted">
+       <!-- Muted Speaker Icon -->
+       <svg class="icon-muted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.5 12A4.5 4.5 0 0 0 14 7.97v8.05c1.48-.73 2.5-2.25 2.5-4.02zM5 9v6h4l5 5V4L9 9H5zm11.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM19 12c0 .82-.15 1.61-.41 2.34l1.53 1.53c.56-1.17.88-2.48.88-3.87s-.32-2.7-.88-3.87l-1.53 1.53c.26.73.41 1.52.41 2.34z"/></svg>
+       <!-- Unmuted Speaker Icon -->
+       <svg class="icon-unmuted" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+   </div>
+   <!-- === END OF MUTE BUTTON === -->
+
+   <!-- This is where the hidden jukebox player will live -->
+   <div id="jukebox-player-container" style="display: none;"></div>
+
+
 
 
 
