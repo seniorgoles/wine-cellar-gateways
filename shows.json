@@ -37,30 +37,6 @@
       "title": "The Exchange",
       "description": "Merch and more",
       "buttonImage": "the_exchange.png"
-    },
-    "new1": {
-      "worldId": "new1",
-      "title": "",
-      "description": "",
-      "buttonImage": ""
-    },
-    "new2": {
-      "worldId": "new2",
-      "title": "",
-      "description": "",
-      "buttonImage": ""
-    },
-    "new3": {
-      "worldId": "new3",
-      "title": "",
-      "description": "",
-      "buttonImage": ""
-    },
-    "new4": {
-      "worldId": "new4",
-      "title": "",
-      "description": "",
-      "buttonImage": ""
     }
   },
   "content": {
@@ -1671,8 +1647,8 @@
       "description": "Arrange Music Video Scenes in Sequence game",
       "game_play": "Drag the video clips into the correct story order on the board below.",
       "buttonImage": "director cut main.png",
-      "leftSidebarVideoId": "",
-      "rightSidebarVideoId": "",
+      "leftSidebarVideoId": "ETg9ULatCa1",
+      "rightSidebarVideoId": "HohtDXWDx7U",
       "isVisible": true,
       "price": "",
       "sku": "",
@@ -1683,78 +1659,78 @@
         {
           "contentId": "sequence_puzzle",
           "videoId": "kUB1FlKAh00",
-          "startSeconds": 5,
-          "endSeconds": 80,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Lost"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "5MKNgm4nGeA",
-          "startSeconds": 10,
-          "endSeconds": 85,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Let the Rhythm Guide Us"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "ELLhFhO4S-I",
-          "startSeconds": 15,
-          "endSeconds": 90,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Making a Splash"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "ctuMJ5Qo4Kw",
-          "startSeconds": 20,
-          "endSeconds": 95,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Lost in This Sound"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "oYEj6NGT5Hs",
-          "startSeconds": 25,
-          "endSeconds": 100,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Horizons"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "6dCqztZqo-Q",
-          "startSeconds": 30,
-          "endSeconds": 105,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 FBI Chasing Shadows"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "mY4FS2xmCHM",
-          "startSeconds": 35,
-          "endSeconds": 110,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Ghost Riders in the Sky"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "Sy5lExtAjFE",
-          "startSeconds": 40,
-          "endSeconds": 115,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Chasing Midnight"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "GxHoNi0Hht0",
-          "startSeconds": 45,
-          "endSeconds": 120,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 No Turning Back"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "9nwCYkCVdfA",
-          "startSeconds": 50,
-          "endSeconds": 125,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Living For The Thrill"
         },
         {
           "contentId": "sequence_puzzle",
           "videoId": "7xqxDUm6414",
-          "startSeconds": 55,
-          "endSeconds": 130,
+          "startSeconds": 1,
+          "endSeconds": 190,
           "title": "Whispers Of Aurorachrome \u266a \u2013 We Step Into The Scene"
         }
       ]
