@@ -5,6 +5,8 @@
 // --- Global State ---
 let siteData = {};
 let gatewayPlayer;
+let jukeboxPlayer; // <-- NEW
+let isMuted = true; // <-- NEW: Master mute state
 let currentContentId = '';
 let currentVideoIndex = 0;
 let currentWorldId = '';
@@ -12,6 +14,8 @@ const ITEMS_PER_PAGE = 5;
 let worldsCurrentPage = 0;
 let contentCurrentPage = 0;
 let currentGameScript = null;
+
+
 
 // --- Main Initialization ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,6 +34,9 @@ function initializePage() {
     buildWorldsCarousel();
     buildSiteLinks();
     setupCarouselControls();
+    setupJukebox(); // <-- ADD THIS
+    setupUniversalMute(); // <-- AND THIS
+     
     document.getElementById('back-to-arcade-selection-btn').addEventListener('click', () => {
         window.location.hash = '#arcade';
         window.location.reload();
@@ -37,6 +44,7 @@ function initializePage() {
     // --- ADD THIS NEW EVENT LISTENER ---
     // Listener for the back button on the ARCADE MENU
     document.getElementById('back-to-worlds-from-arcade-btn').addEventListener('click', () => {
+        if (jukeboxPlayer) jukeboxPlayer.stopVideo(); // Stop the music
         document.getElementById('arcade-section').style.display = 'none';
         document.getElementById('hero-section').style.display = 'flex';
     });
@@ -59,6 +67,13 @@ function initializePage() {
         history.pushState("", document.title, window.location.pathname + window.location.search);
     }
 }
+
+
+
+
+
+
+
 
 // --- Carousel and Button Building ---
 function buildWorldsCarousel() {
@@ -151,8 +166,103 @@ function selectWorld(worldId) {
     }
 }
 
+   // ===================================================================
+   // ===                   JUKEBOX LOGIC                           ===
+   // ===================================================================
+
+   function setupJukebox() {
+       const openBtn = document.getElementById('jukebox-open-btn');
+       const closeBtn = document.getElementById('jukebox-close-btn');
+       const overlay = document.getElementById('jukebox-overlay');
+
+       openBtn.addEventListener('click', () => {
+           overlay.style.display = 'flex';
+           buildJukeboxCarousel();
+       });
+
+       closeBtn.addEventListener('click', () => {
+           overlay.style.display = 'none';
+       });
+   }
+
+   function buildJukeboxCarousel() {
+       const container = document.getElementById('jukebox-buttons');
+       // We'll use the "gateways" content for our music
+       const allMusic = siteData.content ? Object.values(siteData.content).filter(item => item.type === 'gateway') : [];
+       if (!container || allMusic.length === 0) return;
+
+       // This is a simplified carousel builder for the jukebox
+       container.innerHTML = '';
+       allMusic.forEach(item => {
+           const button = createDynamicButton(item, 'content');
+           button.addEventListener('click', () => {
+               playJukeboxPlaylist(item.playlist);
+               document.getElementById('jukebox-overlay').style.display = 'none'; // Close overlay on selection
+           });
+           container.appendChild(button);
+       });
+       // Note: For simplicity, this first version doesn't have prev/next buttons.
+   }
+
+   function playJukeboxPlaylist(playlist) {
+       if (!playlist || playlist.length === 0) return;
+
+       const playlistIds = playlist.map(video => video.videoId);
+       
+       if (jukeboxPlayer) {
+           // If player exists, load the new playlist
+           jukeboxPlayer.loadPlaylist(playlistIds);
+       } else {
+           // If it's the first time, create the player
+           jukeboxPlayer = new YT.Player('jukebox-player-container', {
+               height: '1', // Must have a size, but can be tiny
+               width: '1',
+               playerVars: {
+                   'controls': 0,
+                   'enablejsapi': 1
+               },
+               events: {
+                   'onReady': () => {
+                       jukeboxPlayer.loadPlaylist(playlistIds);
+                       if (isMuted) {
+                           jukeboxPlayer.mute();
+                       }
+                   }
+               }
+           });
+       }
+   }
+
+   function setupUniversalMute() {
+       const muteBtn = document.getElementById('universal-mute-btn');
+       muteBtn.addEventListener('click', () => {
+           isMuted = !isMuted; // Toggle the master state
+           if (isMuted) {
+               muteBtn.classList.add('muted');
+               if (gatewayPlayer) gatewayPlayer.mute();
+               if (jukeboxPlayer) jukeboxPlayer.mute();
+               // We could also mute all game pieces here if we wanted
+           } else {
+               muteBtn.classList.remove('muted');
+               if (gatewayPlayer) gatewayPlayer.unMute();
+               if (jukeboxPlayer) jukeboxPlayer.unMute();
+           }
+       });
+   }
+
+
+
+
+
+
+
+
+
+
+
 // --- Theater Player Logic ---
 function loadContent(contentId) {
+    if (jukeboxPlayer) jukeboxPlayer.stopVideo(); // Stop the arcade music
     const contentData = siteData.content[contentId];
     if (!contentData) return;
     currentContentId = contentId;
