@@ -178,7 +178,7 @@ function showVictoryScreen() {
         overlay.remove();
     });
     document.getElementById('back-to-arcade-btn').addEventListener('click', () => {
-        if (jukeboxPlayer) jukeboxPlayer.stopVideo(); // Stop the music
+        silenceAllAudio();
         document.getElementById('game-container-wrapper').style.display = 'none';
         document.getElementById('game-selection-container').style.display = 'block';
         overlay.remove();
