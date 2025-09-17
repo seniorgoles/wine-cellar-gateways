@@ -221,7 +221,7 @@ function shuffleArray(array) {
 
     // Back to game selection (check your actual container IDs!)
     document.getElementById('back-to-arcade-btn').addEventListener('click', () => {
-        if (jukeboxPlayer) jukeboxPlayer.stopVideo(); // Stop the music
+        silenceAllAudio();
         const gameWrapper = document.getElementById('game-container-wrapper');
         const selectionContainer = document.getElementById('game-selection-container');
         if (gameWrapper && selectionContainer) {

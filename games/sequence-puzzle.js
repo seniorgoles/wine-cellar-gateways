@@ -282,7 +282,7 @@ function shuffleArray(array) {
            overlay.remove();
        });
        document.getElementById('back-to-arcade-btn').addEventListener('click', () => {
-          if (jukeboxPlayer) jukeboxPlayer.stopVideo(); // Stop the music
+           silenceAllAudio();
            // Go back to the game selection screen
            document.getElementById('game-container-wrapper').style.display = 'none';
            document.getElementById('game-selection-container').style.display = 'block';
