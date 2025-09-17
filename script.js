@@ -134,6 +134,7 @@ function createDynamicButton(item, type) {
 
 // --- Navigation and State Changes ---
 function selectWorld(worldId) {
+    silenceAllAudio(); 
     currentWorldId = worldId;
     contentCurrentPage = 0;
     console.log(`World selected: ${currentWorldId}`);
@@ -206,6 +207,8 @@ function selectWorld(worldId) {
 
    function playJukeboxPlaylist(playlist) {
        if (!playlist || playlist.length === 0) return;
+       silenceAllAudio(); // First, stop any old music
+       startAudioPlayback(); // THEN, set the state to "playing"
 
        const playlistIds = playlist.map(video => video.videoId);
        
@@ -236,16 +239,12 @@ function selectWorld(worldId) {
    function setupUniversalMute() {
        const muteBtn = document.getElementById('universal-mute-btn');
        muteBtn.addEventListener('click', () => {
-           isMuted = !isMuted; // Toggle the master state
            if (isMuted) {
-               muteBtn.classList.add('muted');
-               if (gatewayPlayer) gatewayPlayer.mute();
-               if (jukeboxPlayer) jukeboxPlayer.mute();
-               // We could also mute all game pieces here if we wanted
+               // If we are currently muted, unmute everything
+               startAudioPlayback();
            } else {
-               muteBtn.classList.remove('muted');
-               if (gatewayPlayer) gatewayPlayer.unMute();
-               if (jukeboxPlayer) jukeboxPlayer.unMute();
+               // If we are currently unmuted, mute everything
+               silenceAllAudio();
            }
        });
    }
@@ -262,7 +261,8 @@ function selectWorld(worldId) {
 
 // --- Theater Player Logic ---
 function loadContent(contentId) {
-    if (jukeboxPlayer) jukeboxPlayer.stopVideo(); // Stop the arcade music
+    silenceAllAudio(); // First, stop any old music
+    startAudioPlayback(); // THEN, set the state to "playing"
     const contentData = siteData.content[contentId];
     if (!contentData) return;
     currentContentId = contentId;
@@ -477,4 +477,49 @@ function buildSiteLinks() {
     });
 }
 
+   function silenceAllAudio() {
+       console.log("Silencing all audio sources.");
+       if (gatewayPlayer && typeof gatewayPlayer.stopVideo === 'function') {
+           gatewayPlayer.stopVideo();
+       }
+       if (jukeboxPlayer && typeof jukeboxPlayer.stopVideo === 'function') {
+           jukeboxPlayer.stopVideo();
+       }
+       
+       // --- THIS IS THE CRITICAL PART ---
+       // Update the master state and the button's appearance
+       isMuted = true;
+       document.getElementById('universal-mute-btn').classList.add('muted');
+   }
+
+   function startAudioPlayback() {
+       console.log("Audio playback requested. Unmuting.");
+       
+       // --- THIS IS THE CRITICAL PART ---
+       // Update the master state and the button's appearance
+       isMuted = false;
+       document.getElementById('universal-mute-btn').classList.remove('muted');
+
+       // Unmute any active players
+       if (gatewayPlayer && typeof gatewayPlayer.unMute === 'function') {
+           gatewayPlayer.unMute();
+       }
+       if (jukeboxPlayer && typeof jukeboxPlayer.unMute === 'function') {
+           jukeboxPlayer.unMute();
+       }
+   }
+
+
+
+
+
+
+
 function onYouTubeIframeAPIReady() {}
+
+
+
+
+
+
+

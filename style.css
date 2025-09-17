@@ -196,11 +196,31 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
 
 #game-container-wrapper { width: 100%; text-align: center; }
 #game-container { position: relative; margin: 20px auto; }
-#back-to-arcade-selection-btn {     display: block; /* This is the key */
-    margin: 40px auto 20px auto; /* Top, auto, bottom, auto */
-    background-color: var(--color-gold);
-    width: 250px; /* Give it a defined width */
-}
+
+
+    #back-to-arcade-selection-btn {
+        width: 250px; /* Or your desired width */
+        height: 80px; /* Or your desired height */
+        background-color: transparent;
+        border: none;
+        font-size: 0; /* Hide the text */
+        padding: 0;
+        background-image: url('images/back_to_games_btn.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        margin: 40px auto 20px auto; /* Keep the centering margins */
+    }
+    #back-to-arcade-selection-btn:hover {
+        transform: scale(1.05);
+    }
+
+
+
+
+
 /* --- Styling for Game Instructions --- */
 #game-instructions {
     color: var(--color-gold); /* Gold color as requested */
@@ -209,6 +229,55 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
     max-width: 800px;         /* Keep it from getting too wide */
     margin: -20px auto 20px auto; /* Negative top margin to pull it closer to the title */
 }
+
+/* --- Styling for Arcade Navigation Buttons --- */
+
+/* Style for the "Choose Music" button */
+#jukebox-open-btn {
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    font-size: 0; /* Hide the text */
+    padding: 0;
+    background-image: url('images/choose_music_btn.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: block;      /* Ensure it's treated as a block */
+    margin-left: auto;   /* Auto margin on the left */
+    margin-right: auto;  /* Auto margin on the right */
+}
+#jukebox-open-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Style for the "Back to Worlds" button */
+#back-to-worlds-from-arcade-btn {
+    width: 200px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    font-size: 0; /* Hide the text */
+    padding: 0;
+    background-image: url('images/back_to_worlds_btn.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: block;      /* Ensure it's treated as a block */
+    margin-left: auto;   /* Auto margin on the left */
+    margin-right: auto;  /* Auto margin on the right */
+}
+#back-to-worlds-from-arcade-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
 
 
 
@@ -436,19 +505,6 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
 }
 
 
-#back-to-worlds-from-arcade-btn {
-    margin-top: 40px;
-    background-color: var(--color-burgundy); /* Let's give it a different color */
-    display: block;      /* Ensure it's treated as a block */
-    margin-left: auto;   /* Auto margin on the left */
-    margin-right: auto;  /* Auto margin on the right */
-    width: 250px;        /* Give it a fixed width to center */
-}
-
-
-
-
-
 
 
 /* --- C. Memory Match Game Styles --- */
@@ -645,15 +701,7 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
 /* ===           13. JUKEBOX & UNIVERSAL AUDIO STYLES              === */
 /* =================================================================== */
 
-#jukebox-open-btn {
-    margin-bottom: 40px;
-    background-color: var(--color-burgundy);
-    display: block;      /* Ensure it's a block element */
-    margin-left: auto;   /* Auto margin on the left */
-    margin-right: auto;  /* Auto margin on the right */
-    width: 300px;        /* Give it a nice, fixed width */ 
-    
-}
+
 
 /* The full-screen dark background for the overlay */
 #jukebox-overlay {
@@ -698,9 +746,26 @@ h2 { font-size: 2.5rem; text-align: center; margin-bottom: 30px; }
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.4s ease; 
 }
 #universal-mute-btn:hover { background-color: rgba(0, 0, 0, 0.8); }
+
+/* === ADD THESE NEW GLOW RULES === */
+
+/* The RED glow when the speaker is MUTED */
+#universal-mute-btn.muted {
+    box-shadow: 0 0 15px 3px #FF0000; /* Red glow */
+}
+
+/* The GREEN glow when the speaker is UNMUTED */
+#universal-mute-btn:not(.muted) {
+    box-shadow: 0 0 15px 3px #00FF00; /* Green glow */
+}
+
+/* === END OF NEW GLOW RULES === */
+
+
+
 #universal-mute-btn svg { width: 24px; height: 24px; fill: var(--color-white); }
 #universal-mute-btn.muted .icon-unmuted { display: none; }
 #universal-mute-btn.muted .icon-muted { display: block; }
