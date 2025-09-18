@@ -40,99 +40,6 @@
     }
   },
   "content": {
-    "chardonnay": {
-      "worldId": "the_cellar",
-      "contentId": "chardonnay",
-      "title": "Chardonnay White Wine",
-      "description": "A rare treasure...",
-      "buttonImage": "chardonnay whit.png",
-      "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
-      "isVisible": true,
-      "price": 29.99,
-      "sku": "WC-001",
-      "inStock": true,
-      "genre": "White Wine",
-      "type": "wine",
-      "playlist": [
-        {
-          "contentId": "chardonnay",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "The Story of Solaris Ice Wine"
-        },
-        {
-          "contentId": "chardonnay",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Perfect Pairings for Solaris"
-        }
-      ]
-    },
-    "pinot_grigio": {
-      "worldId": "the_cellar",
-      "contentId": "pinot_grigio",
-      "title": "Pinot Grigio White Wine",
-      "description": "A rare treasure...",
-      "buttonImage": "pinot.png",
-      "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
-      "isVisible": true,
-      "price": 30.99,
-      "sku": "WC-002",
-      "inStock": false,
-      "genre": "White Wine",
-      "type": "wine",
-      "playlist": [
-        {
-          "contentId": "pinot_grigio",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "The Story of Midnight Ice Wine"
-        },
-        {
-          "contentId": "pinot_grigio",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Perfect Pairings for Midnight"
-        }
-      ]
-    },
-    "rose": {
-      "worldId": "the_cellar",
-      "contentId": "rose",
-      "title": "Rose Wine",
-      "description": "A rare treasure...",
-      "buttonImage": "rose.png",
-      "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
-      "isVisible": true,
-      "price": 31.99,
-      "sku": "WC-003",
-      "inStock": true,
-      "genre": "Red Wine",
-      "type": "wine",
-      "playlist": [
-        {
-          "contentId": "rose",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "The Story of Midnight Ice Wine"
-        },
-        {
-          "contentId": "rose",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Perfect Pairings for Midnight"
-        }
-      ]
-    },
     "cabernet": {
       "worldId": "the_cellar",
       "contentId": "cabernet",
@@ -178,37 +85,6 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "The Story of Solaris Ice Wine"
-        }
-      ]
-    },
-    "midnight": {
-      "worldId": "the_cellar",
-      "contentId": "midnight",
-      "title": "Midnight Merlot Red Wine",
-      "description": "Deep and comforting...",
-      "buttonImage": "merlot.png",
-      "leftSidebarVideoId": "ETg9ULatCa0",
-      "rightSidebarVideoId": "Ath8nj_qE_w",
-      "isVisible": true,
-      "price": 34.99,
-      "sku": "WC-006",
-      "inStock": false,
-      "genre": "Merlot",
-      "type": "wine",
-      "playlist": [
-        {
-          "contentId": "midnight",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "The Story of Midnight Ice Wine"
-        },
-        {
-          "contentId": "midnight",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Perfect Pairings for Midnight"
         }
       ]
     },
