@@ -150,17 +150,10 @@
       "playlist": [
         {
           "contentId": "cabernet",
-          "videoId": "advBG64C_3Q",
+          "videoId": "bB2kzR0xpmo",
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "The Story of Midnight Ice Wine"
-        },
-        {
-          "contentId": "cabernet",
-          "videoId": "advBG64C_3Q",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Perfect Pairings for Midnight"
         }
       ]
     },
@@ -185,27 +178,6 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "The Story of Solaris Ice Wine"
-        },
-        {
-          "contentId": "solarice",
-          "videoId": "ETg9ULatCa0",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Perfect Pairings for Solaris"
-        },
-        {
-          "contentId": "solarice",
-          "videoId": "DQ7BnBSbVgw",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "The Story of Solaris Ice Wine"
-        },
-        {
-          "contentId": "solarice",
-          "videoId": "HohtDXWDx7U",
-          "startSeconds": 0,
-          "endSeconds": 0,
-          "title": "Perfect Pairings for Solaris"
         }
       ]
     },
