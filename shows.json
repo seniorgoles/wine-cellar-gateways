@@ -40,6 +40,30 @@
     }
   },
   "content": {
+    "pinot_grigio": {
+      "worldId": "the_cellar",
+      "contentId": "pinot_grigio",
+      "title": "Pinot Grigio White Wine",
+      "description": "A rare treasure...",
+      "buttonImage": "pinot.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 30.99,
+      "sku": "WC-002",
+      "inStock": false,
+      "genre": "White Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "pinot_grigio",
+          "videoId": "m7U5n1vqfKg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Perfect Pairings for Midnight"
+        }
+      ]
+    },
     "rose": {
       "worldId": "the_cellar",
       "contentId": "rose",
