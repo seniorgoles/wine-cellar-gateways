@@ -40,6 +40,30 @@
     }
   },
   "content": {
+    "rose": {
+      "worldId": "the_cellar",
+      "contentId": "rose",
+      "title": "Rose Wine",
+      "description": "A rare treasure...",
+      "buttonImage": "rose.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 31.99,
+      "sku": "WC-003",
+      "inStock": true,
+      "genre": "Red Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "rose",
+          "videoId": "wWl7460BJ0I",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of a summer wine"
+        }
+      ]
+    },
     "cabernet": {
       "worldId": "the_cellar",
       "contentId": "cabernet",
