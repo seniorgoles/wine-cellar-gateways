@@ -136,6 +136,30 @@
         }
       ]
     },
+    "merlot": {
+      "worldId": "the_cellar",
+      "contentId": "merlot",
+      "title": "Midnight Merlot Red Wine",
+      "description": "Deep and comforting...",
+      "buttonImage": "merlot.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 34.99,
+      "sku": "WC-006",
+      "inStock": false,
+      "genre": "Merlot",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "merlot",
+          "videoId": "Ywzc5dUAD_I",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "The Story of Midnight Ice Wine"
+        }
+      ]
+    },
     "lostLove": {
       "worldId": "the_theater",
       "contentId": "lostLove",
