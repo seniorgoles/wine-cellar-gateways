@@ -40,6 +40,30 @@
     }
   },
   "content": {
+    "chardonnay": {
+      "worldId": "the_cellar",
+      "contentId": "chardonnay",
+      "title": "Chardonnay White Wine",
+      "description": "A rare treasure...",
+      "buttonImage": "chardonnay whit.png",
+      "leftSidebarVideoId": "ETg9ULatCa0",
+      "rightSidebarVideoId": "Ath8nj_qE_w",
+      "isVisible": true,
+      "price": 29.99,
+      "sku": "WC-001",
+      "inStock": true,
+      "genre": "White Wine",
+      "type": "wine",
+      "playlist": [
+        {
+          "contentId": "chardonnay",
+          "videoId": "h8jhqt8gJgc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Chardonnay, the story of clarity and memory"
+        }
+      ]
+    },
     "pinot_grigio": {
       "worldId": "the_cellar",
       "contentId": "pinot_grigio",
@@ -112,9 +136,9 @@
         }
       ]
     },
-    "solarice": {
+    "ice_wine": {
       "worldId": "the_cellar",
-      "contentId": "solarice",
+      "contentId": "ice_wine",
       "title": "Solaris Ice Wine",
       "description": "A rare treasure...",
       "buttonImage": "ice.png",
@@ -128,11 +152,11 @@
       "type": "wine",
       "playlist": [
         {
-          "contentId": "solarice",
-          "videoId": "DdgR2GSnl64",
+          "contentId": "ice_wine",
+          "videoId": "uZVXX6b6G1M",
           "startSeconds": 0,
           "endSeconds": 0,
-          "title": "The Story of Solaris Ice Wine"
+          "title": "The Story of Ice Wine frozen in time"
         }
       ]
     },
