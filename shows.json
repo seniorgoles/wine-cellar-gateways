@@ -1,6 +1,6 @@
 {
   "siteConfig": {
-    "heroBgVideoId": "-YCmK3BDAlk",
+    "heroBgVideoId": "5iTVBzdM6JA",
     "gatewaysBgVideoId": "7FcOeKuumLQ"
   },
   "siteLinks": [
@@ -558,6 +558,13 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Dance All Night 2025 Symphonic Dance Party"
+        },
+        {
+          "contentId": "passion",
+          "videoId": "7cDRUgJCiAY",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Silent Scream [Official Music Video]"
         }
       ]
     },

@@ -4,9 +4,11 @@
 
 // --- Global State ---
 let siteData = {};
+let heroPlayer; // <-- ADD THIS
 let gatewayPlayer;
 let jukeboxPlayer; // <-- NEW
 let isMuted = true; // <-- NEW: Master mute state
+let activeAudioSource = null; // <-- ADD THIS. Can be 'hero', 'gateway', or 'jukebox'.
 let currentContentId = '';
 let currentVideoIndex = 0;
 let currentWorldId = '';
@@ -43,11 +45,8 @@ function initializePage() {
     });
     // --- ADD THIS NEW EVENT LISTENER ---
     // Listener for the back button on the ARCADE MENU
-    document.getElementById('back-to-worlds-from-arcade-btn').addEventListener('click', () => {
-        if (jukeboxPlayer) jukeboxPlayer.stopVideo(); // Stop the music
-        document.getElementById('arcade-section').style.display = 'none';
-        document.getElementById('hero-section').style.display = 'flex';
-    });
+    
+    document.getElementById('back-to-worlds-from-arcade-btn').addEventListener('click', returnToHero);
 
 
     const hash = window.location.hash;
@@ -134,7 +133,28 @@ function createDynamicButton(item, type) {
 
 // --- Navigation and State Changes ---
 function selectWorld(worldId) {
-    silenceAllAudio(); 
+    // When changing worlds, mute the hero player and stop the jukebox.
+    if (heroPlayer && typeof heroPlayer.mute === 'function') {
+        heroPlayer.mute();
+    }
+    if (jukeboxPlayer && typeof jukeboxPlayer.stopVideo === 'function') {
+        jukeboxPlayer.stopVideo();
+    }
+     // --- THIS IS THE FINAL, MISSING COMMAND ---
+    if (gatewayPlayer && typeof gatewayPlayer.stopVideo === 'function') {
+        gatewayPlayer.stopVideo();
+    }
+    // --- END OF FINAL COMMAND ---
+ 
+ 
+ 
+    // --- THIS IS THE FIX ---
+    // If no other sound is playing, the site is now effectively muted.
+    isMuted = true;
+    document.getElementById('universal-mute-btn').classList.add('muted');
+    activeAudioSource = null; // No active source when in a menu
+    // --- END OF FIX ---
+
     currentWorldId = worldId;
     contentCurrentPage = 0;
     console.log(`World selected: ${currentWorldId}`);
@@ -166,6 +186,30 @@ function selectWorld(worldId) {
         }
     }
 }
+ function returnToHero() {
+       // Hide the other sections
+       document.getElementById('theater-section').style.display = 'none';
+       document.getElementById('arcade-section').style.display = 'none';
+       
+       // Show the hero section
+       document.getElementById('hero-section').style.display = 'flex';
+
+       // --- THIS IS THE MAGIC ---
+       // Unmute the hero player and ensure the master audio state is correct
+       if (heroPlayer && typeof heroPlayer.unMute === 'function') {
+           heroPlayer.unMute();
+       }
+         startAudioPlayback('hero'); // This sets isMuted to false and turns the speaker GREEN
+   }
+
+
+
+
+
+
+
+
+
 
    // ===================================================================
    // ===                   JUKEBOX LOGIC                           ===
@@ -208,7 +252,7 @@ function selectWorld(worldId) {
    function playJukeboxPlaylist(playlist) {
        if (!playlist || playlist.length === 0) return;
        silenceAllAudio(); // First, stop any old music
-       startAudioPlayback(); // THEN, set the state to "playing"
+       startAudioPlayback('jukebox'); // Prioritize the jukebox player's audio
 
        const playlistIds = playlist.map(video => video.videoId);
        
@@ -236,19 +280,30 @@ function selectWorld(worldId) {
        }
    }
 
-   function setupUniversalMute() {
-       const muteBtn = document.getElementById('universal-mute-btn');
-       muteBtn.addEventListener('click', () => {
-           if (isMuted) {
-               // If we are currently muted, unmute everything
-               startAudioPlayback();
-           } else {
-               // If we are currently unmuted, mute everything
-               silenceAllAudio();
-           }
-       });
-   }
+function setupUniversalMute() {
+    const muteBtn = document.getElementById('universal-mute-btn');
+    muteBtn.addEventListener('click', () => {
+        isMuted = !isMuted; // Toggle the master state
 
+        if (isMuted) {
+            // If we are MUTING, mute everything.
+            muteBtn.classList.add('muted');
+            if (heroPlayer) heroPlayer.mute();
+            if (gatewayPlayer) gatewayPlayer.mute();
+            if (jukeboxPlayer) jukeboxPlayer.mute();
+        } else {
+            // If we are UNMUTING, only unmute the LAST ACTIVE source.
+            muteBtn.classList.remove('muted');
+            if (activeAudioSource === 'hero' && heroPlayer) {
+                heroPlayer.unMute();
+            } else if (activeAudioSource === 'gateway' && gatewayPlayer) {
+                gatewayPlayer.unMute();
+            } else if (activeAudioSource === 'jukebox' && jukeboxPlayer) {
+                jukeboxPlayer.unMute();
+            }
+        }
+    });
+}
 
 
 
@@ -261,8 +316,8 @@ function selectWorld(worldId) {
 
 // --- Theater Player Logic ---
 function loadContent(contentId) {
-    silenceAllAudio(); // First, stop any old music
-    startAudioPlayback(); // THEN, set the state to "playing"
+       silenceAllAudio();
+       startAudioPlayback('gateway'); // Prioritize the theater player's audio
     const contentData = siteData.content[contentId];
     if (!contentData) return;
     currentContentId = contentId;
@@ -363,9 +418,30 @@ function loadGame(contentId) {
 
 function setupBackgrounds() {
     const heroWrapper = document.querySelector('#hero-section .background-video-wrapper');
+    
     if (heroWrapper && siteData.siteConfig?.heroBgVideoId) {
-        heroWrapper.appendChild(createBgVideo(siteData.siteConfig.heroBgVideoId));
+        // We give the YT.Player the actual HTML element, not just an ID string.
+        heroPlayer = new YT.Player(heroWrapper, {
+            videoId: siteData.siteConfig.heroBgVideoId,
+            playerVars: { 
+                autoplay: 1, 
+                controls: 0, 
+                loop: 1, 
+                playlist: siteData.siteConfig.heroBgVideoId,
+                mute: 1 // Let's start it muted to be safe, then unmute
+            },
+            events: {
+                'onReady': (event) => {
+                    // When the hero video starts, the site is unmuted
+                      startAudioPlayback('hero'); // Prioritize the hero player's audio
+                      event.target.playVideo();
+                }
+            }
+        });
     }
+
+    // The logic for the other background videos is now handled by selectWorld,
+    // so we can simplify this function.
 }
 
 function setupPlayerControls() {
@@ -439,9 +515,20 @@ function updateCarouselNav(type, totalPages, currentPage) {
     }
 }
 
-function createBgVideo(videoId) {
+function createBgVideo(videoId, isMutedByDefault = true) { // Default to muted
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1`;
+    
+    // Start building the URL parameters
+    let params = `?autoplay=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1`;
+
+    // --- THIS IS THE NEW LOGIC ---
+    // Only add the 'mute=1' parameter if it's supposed to be muted
+    if (isMutedByDefault) {
+        params += '&mute=1';
+    }
+    // --- END OF NEW LOGIC ---
+
+    iframe.src = `https://www.youtube.com/embed/${videoId}${params}`;
     iframe.frameBorder = '0';
     iframe.allow = 'autoplay; encrypted-media';
     return iframe;
@@ -478,36 +565,49 @@ function buildSiteLinks() {
 }
 
    function silenceAllAudio() {
-       console.log("Silencing all audio sources.");
-       if (gatewayPlayer && typeof gatewayPlayer.stopVideo === 'function') {
-           gatewayPlayer.stopVideo();
-       }
-       if (jukeboxPlayer && typeof jukeboxPlayer.stopVideo === 'function') {
-           jukeboxPlayer.stopVideo();
-       }
-       
-       // --- THIS IS THE CRITICAL PART ---
-       // Update the master state and the button's appearance
-       isMuted = true;
-       document.getElementById('universal-mute-btn').classList.add('muted');
-   }
+    console.log("Silencing all audio sources.");
+    
+    // MUTE the hero player, don't stop it.
+    if (heroPlayer && typeof heroPlayer.mute === 'function') {
+        heroPlayer.mute();
+    }
+    // STOP the theater and jukebox players.
+    if (gatewayPlayer && typeof gatewayPlayer.stopVideo === 'function') {
+        gatewayPlayer.stopVideo();
+    }
+    if (jukeboxPlayer && typeof jukeboxPlayer.stopVideo === 'function') {
+        jukeboxPlayer.stopVideo();
+    }
+    
+    // Update the master state and the button's appearance.
+    isMuted = true;
+    document.getElementById('universal-mute-btn').classList.add('muted');
+}
 
-   function startAudioPlayback() {
-       console.log("Audio playback requested. Unmuting.");
-       
-       // --- THIS IS THE CRITICAL PART ---
-       // Update the master state and the button's appearance
-       isMuted = false;
-       document.getElementById('universal-mute-btn').classList.remove('muted');
+function startAudioPlayback(playerToPrioritize) {
+    console.log(`Audio playback requested. Prioritizing: ${playerToPrioritize}`);
+    
+    // 1. Set the new active source
+    activeAudioSource = playerToPrioritize;
+    
+    // 2. Update the master state and the button's appearance
+    isMuted = false;
+    document.getElementById('universal-mute-btn').classList.remove('muted');
 
-       // Unmute any active players
-       if (gatewayPlayer && typeof gatewayPlayer.unMute === 'function') {
-           gatewayPlayer.unMute();
-       }
-       if (jukeboxPlayer && typeof jukeboxPlayer.unMute === 'function') {
-           jukeboxPlayer.unMute();
-       }
-   }
+    // 3. Mute ALL players first to ensure a clean slate
+    if (heroPlayer) heroPlayer.mute();
+    if (gatewayPlayer) gatewayPlayer.mute();
+    if (jukeboxPlayer) jukeboxPlayer.mute();
+
+    // 4. Unmute ONLY the prioritized player
+    if (playerToPrioritize === 'hero' && heroPlayer) {
+        heroPlayer.unMute();
+    } else if (playerToPrioritize === 'gateway' && gatewayPlayer) {
+        gatewayPlayer.unMute();
+    } else if (playerToPrioritize === 'jukebox' && jukeboxPlayer) {
+        jukeboxPlayer.unMute();
+    }
+}
 
 
 
