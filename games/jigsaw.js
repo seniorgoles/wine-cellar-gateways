@@ -178,7 +178,14 @@ function showVictoryScreen() {
         overlay.remove();
     });
     document.getElementById('back-to-arcade-btn').addEventListener('click', () => {
-        silenceAllAudio();
+    // --- THIS IS THE CORRECTED LOGIC ---
+    // Only stop the Jukebox player, if it exists and is playing.
+    if (jukeboxPlayer && typeof jukeboxPlayer.stopVideo === 'function') {
+        jukeboxPlayer.stopVideo();
+    }
+    // --- END OF CORRECTION ---
+
+      
         document.getElementById('game-container-wrapper').style.display = 'none';
         document.getElementById('game-selection-container').style.display = 'block';
         overlay.remove();

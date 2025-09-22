@@ -282,8 +282,16 @@ function shuffleArray(array) {
            overlay.remove();
        });
        document.getElementById('back-to-arcade-btn').addEventListener('click', () => {
-           silenceAllAudio();
-           // Go back to the game selection screen
+         // --- THIS IS THE CORRECTED LOGIC ---
+    // Only stop the Jukebox player, if it exists and is playing.
+    if (jukeboxPlayer && typeof jukeboxPlayer.stopVideo === 'function') {
+        jukeboxPlayer.stopVideo();
+    }
+    // --- END OF CORRECTION ---    
+    
+    
+    
+    // Go back to the game selection screen
            document.getElementById('game-container-wrapper').style.display = 'none';
            document.getElementById('game-selection-container').style.display = 'block';
            overlay.remove();

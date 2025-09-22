@@ -221,7 +221,15 @@ function shuffleArray(array) {
 
     // Back to game selection (check your actual container IDs!)
     document.getElementById('back-to-arcade-btn').addEventListener('click', () => {
-        silenceAllAudio();
+     // --- THIS IS THE CORRECTED LOGIC ---
+    // Only stop the Jukebox player, if it exists and is playing.
+    if (jukeboxPlayer && typeof jukeboxPlayer.stopVideo === 'function') {
+        jukeboxPlayer.stopVideo();
+    }
+    // --- END OF CORRECTION ---
+ 
+ 
+
         const gameWrapper = document.getElementById('game-container-wrapper');
         const selectionContainer = document.getElementById('game-selection-container');
         if (gameWrapper && selectionContainer) {
