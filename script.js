@@ -425,7 +425,8 @@ function setupBackgrounds() {
             videoId: siteData.siteConfig.heroBgVideoId,
             playerVars: { 
                 autoplay: 1, 
-                controls: 0, 
+                controls: 0,
+                 rel: 0, // <-- ADD THIS LINE to disable related videos
                 loop: 1, 
                 playlist: siteData.siteConfig.heroBgVideoId,
                 mute: 1 // Let's start it muted to be safe, then unmute
@@ -519,7 +520,7 @@ function createBgVideo(videoId, isMutedByDefault = true) { // Default to muted
     const iframe = document.createElement('iframe');
     
     // Start building the URL parameters
-    let params = `?autoplay=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1`;
+    let params = `?autoplay=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1&rel=0`;
 
     // --- THIS IS THE NEW LOGIC ---
     // Only add the 'mute=1' parameter if it's supposed to be muted
@@ -538,7 +539,7 @@ function createSidebarVideo(videoId, container) {
     if (!videoId) { container.innerHTML = '<div class="video-placeholder"></div>'; return; }
     container.innerHTML = '';
     const iframe = document.createElement('iframe');
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1`;
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=0&showinfo=0&modestbranding=1&rel=0`;
     container.appendChild(iframe);
 }
 
@@ -616,10 +617,3 @@ function startAudioPlayback(playerToPrioritize) {
 
 
 function onYouTubeIframeAPIReady() {}
-
-
-
-
-
-
-
