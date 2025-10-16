@@ -61,6 +61,34 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "Chardonnay, the story of clarity and memory"
+        },
+        {
+          "contentId": "chardonnay",
+          "videoId": "3jQA42B9DJc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Chardonnay food pairing"
+        },
+        {
+          "contentId": "chardonnay",
+          "videoId": "CCw6-l7hKt0",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Love\u2019s Smoky Haze"
+        },
+        {
+          "contentId": "chardonnay",
+          "videoId": "a6W5pZ6mEWc",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Lost Lover (refresh)"
+        },
+        {
+          "contentId": "chardonnay",
+          "videoId": "N0Zny6wFiuk",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Tangled Mess"
         }
       ]
     },
@@ -401,6 +429,13 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "Whispers Of Aurorachrome \u266a \u2013 Transform"
+        },
+        {
+          "contentId": "lostLove",
+          "videoId": "VenXdddXX78",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Echoes of You [Official Music Video] Refresh Version"
         }
       ]
     },

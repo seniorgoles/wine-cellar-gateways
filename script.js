@@ -11,6 +11,7 @@ let isMuted = true; // <-- NEW: Master mute state
 let activeAudioSource = null; // <-- ADD THIS. Can be 'hero', 'gateway', or 'jukebox'.
 let currentContentId = '';
 let currentVideoIndex = 0;
+let isLoadingNextVideo = false; // <-- ADD THIS NEW "FLAG"
 let currentWorldId = '';
 const ITEMS_PER_PAGE = 5;
 let worldsCurrentPage = 0;
@@ -38,7 +39,7 @@ function initializePage() {
     setupCarouselControls();
     setupJukebox(); // <-- ADD THIS
     setupUniversalMute(); // <-- AND THIS
-     
+    setupAmbianceMixer(); // <-- ADD THIS 
     document.getElementById('back-to-arcade-selection-btn').addEventListener('click', () => {
         window.location.hash = '#arcade';
         window.location.reload();
@@ -291,9 +292,14 @@ function setupUniversalMute() {
             if (heroPlayer) heroPlayer.mute();
             if (gatewayPlayer) gatewayPlayer.mute();
             if (jukeboxPlayer) jukeboxPlayer.mute();
+            rainAudio.muted = true; // <-- MUTE AMBIANCE
+            fireplaceAudio.muted = true; // <-- MUTE AMBIANCE
         } else {
             // If we are UNMUTING, only unmute the LAST ACTIVE source.
             muteBtn.classList.remove('muted');
+            rainAudio.muted = false; // <-- UNMUTE AMBIANCE
+            fireplaceAudio.muted = false; // <-- UNMUTE AMBIANCE
+
             if (activeAudioSource === 'hero' && heroPlayer) {
                 heroPlayer.unMute();
             } else if (activeAudioSource === 'gateway' && gatewayPlayer) {
@@ -322,7 +328,14 @@ function loadContent(contentId) {
     if (!contentData) return;
     currentContentId = contentId;
     currentVideoIndex = 0;
-    if (contentData.playlist) shuffleArray(contentData.playlist);
+//    if (contentData.playlist) shuffleArray(contentData.playlist);
+    // --- THIS IS YOUR NEW, SMART LOGIC ---
+    // Only shuffle the playlist if the content belongs to 'the_theater' world
+    if (contentData.playlist && contentData.worldId === 'the_theater') {
+        shuffleArray(contentData.playlist);
+    }
+    // --- END OF NEW LOGIC ---
+
     createSidebarVideo(contentData.leftSidebarVideoId, document.getElementById('left-sidebar'));
     createSidebarVideo(contentData.rightSidebarVideoId, document.getElementById('right-sidebar'));
     document.querySelectorAll('#content-buttons .btn').forEach(b => b.classList.remove('active'));
@@ -337,6 +350,7 @@ function loadContent(contentId) {
 }
 
 function onGatewayPlayerReady(event) {
+    isLoadingNextVideo = false; // <-- ADD THIS LINE
     setupPlayerControls();
     loadVideoInPlaylist(currentVideoIndex);
     event.target.addEventListener('onStateChange', onGatewayPlayerStateChange);
@@ -364,10 +378,20 @@ function loadVideoInPlaylist(index) {
 }
 
 function onGatewayPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED) {
-        const playlist = siteData.content[currentContentId].playlist;
-        const nextVideoIndex = (currentVideoIndex + 1) % playlist.length;
-        loadVideoInPlaylist(nextVideoIndex);
+       if (event.data === YT.PlayerState.ENDED && !isLoadingNextVideo) {
+           // --- THE STATE LOCK IS ENGAGED ---
+           isLoadingNextVideo = true;
+           console.log("ENDED event received. Loading next video...");
+
+           const playlist = siteData.content[currentContentId].playlist;
+           const nextVideoIndex = (currentVideoIndex + 1) % playlist.length;
+           
+           loadVideoInPlaylist(nextVideoIndex);
+       } else if (event.data === YT.PlayerState.PLAYING) {
+           // --- THE STATE LOCK IS RELEASED ---
+           // Once the new video starts playing, we can release the lock.
+           isLoadingNextVideo = false;
+           console.log("New video is PLAYING. Lock released.");
     }
 }
 
@@ -610,7 +634,27 @@ function startAudioPlayback(playerToPrioritize) {
     }
 }
 
+   function setupAmbianceMixer() {
+       const rainAudio = document.getElementById('audio-rain');
+       const fireplaceAudio = document.getElementById('audio-fireplace');
+       const rainSlider = document.getElementById('rain-slider');
+       const fireplaceSlider = document.getElementById('fireplace-slider');
 
+       // Link the sliders to the audio volume
+       rainSlider.addEventListener('input', (e) => {
+           rainAudio.volume = e.target.value;
+       });
+       fireplaceSlider.addEventListener('input', (e) => {
+           fireplaceAudio.volume = e.target.value;
+       });
+
+       // We need a way to start the audio playing silently.
+       // A single click anywhere on the page is a good trigger.
+       document.body.addEventListener('click', () => {
+           if (rainAudio.paused) rainAudio.play();
+           if (fireplaceAudio.paused) fireplaceAudio.play();
+       }, { once: true }); // This listener only runs once
+   }
 
 
 
