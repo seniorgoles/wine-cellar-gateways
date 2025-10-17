@@ -161,6 +161,34 @@
           "startSeconds": 0,
           "endSeconds": 0,
           "title": "The Story of Midnight Ice Wine"
+        },
+        {
+          "contentId": "cabernet",
+          "videoId": "0Ig9tN2iuLI",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Cabernet food pairing"
+        },
+        {
+          "contentId": "cabernet",
+          "videoId": "vcj_kB_8xqg",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Shadows"
+        },
+        {
+          "contentId": "cabernet",
+          "videoId": "zUEPn6oRsVo",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Dissolve"
+        },
+        {
+          "contentId": "cabernet",
+          "videoId": "MQyY8ccX53M",
+          "startSeconds": 0,
+          "endSeconds": 0,
+          "title": "Whispers Of Aurorachrome \u266a \u2013 Release"
         }
       ]
     },
